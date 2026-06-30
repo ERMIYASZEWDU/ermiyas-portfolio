@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary-500 via-purple-500 to-cyan-500 p-1 animate-glow">
               <img 
                 src={profilePhoto} 
-                alt="Ermiyas Zewdu Assef" 
+                alt="Ermiyas Zewdu" 
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
@@ -73,7 +73,7 @@ const Hero = () => {
           variants={itemVariants}
           className="text-6xl md:text-8xl font-bold mb-6"
         >
-          Ermiyas Zewdu <span className="gradient-text">Assef</span>
+          Ermiyas <span className="gradient-text">Zewdu</span>
         </motion.h1>
 
         <motion.div variants={itemVariants} className="h-16 mb-6">

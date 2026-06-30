@@ -1,4 +1,4 @@
-# 🚀 AI Engineer Portfolio - Ermiyas Zewdu Assef
+# 🚀 AI Engineer Portfolio - Ermiyas Zewdu
 
 A **world-class, production-ready** personal portfolio website for an Intelligent Data & AI Engineer. Built with modern web technologies and designed to feel like a premium tech product landing page.
 
@@ -208,7 +208,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👤 Author
 
-**Ermiyas Zewdu Assef**
+**Ermiyas Zewdu**
 - GitHub: [@ERMIYASZEWDU](https://github.com/ERMIYASZEWDU)
 - LinkedIn: [Ermiyas Zewdu](https://www.linkedin.com/in/ermiyas2)
 - Email: ermiyaszewdu266@gmail.com
@@ -222,6 +222,6 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-**Built with ❤️ by Ermiyas Zewdu Assef**
+**Built with ❤️ by Ermiyas Zewdu**
 
 *Turning data into intelligent systems.*

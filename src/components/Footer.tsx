@@ -85,7 +85,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <p className="text-gray-400 text-sm text-center">
-              © {currentYear} Ermiyas Zewdu Assef. All rights reserved.
+              © {currentYear} Ermiyas Zewdu. All rights reserved.
             </p>
           </div>
         </div>
