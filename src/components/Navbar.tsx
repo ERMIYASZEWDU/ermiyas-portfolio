@@ -59,7 +59,7 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
             ))}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg glass hover:bg-primary-600/20 transition-colors"
+              className="p-2 rounded-lg glass hover:bg-primary-600/20 transition-colors touch-manipulation active:scale-95"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -68,7 +68,7 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg glass"
+            className="md:hidden p-2 rounded-lg glass touch-manipulation active:scale-95"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -91,6 +91,17 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                 {link.name}
               </a>
             ))}
+            
+            {/* Mobile Dark Mode Toggle */}
+            <div className="pt-4 border-t border-white/10 mt-4">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className="flex items-center gap-3 w-full py-3 text-gray-300 hover:text-primary-400 transition-colors touch-manipulation active:scale-95 active:bg-primary-600/10"
+              >
+                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                <span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
+              </button>
+            </div>
           </motion.div>
         )}
       </div>
