@@ -117,7 +117,7 @@ const GitHub = () => {
             {repositories.map((repo, index) => (
               <motion.a
                 key={index}
-                href={`https://github.com/ermiyasassefa/${repo.name}`}
+                href={`https://github.com/ERMIYASZEWDU/${repo.name}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}
@@ -152,7 +152,7 @@ const GitHub = () => {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/ermiyasassefa"
+            href="https://github.com/ERMIYASZEWDU"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all"

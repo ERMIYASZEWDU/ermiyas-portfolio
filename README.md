@@ -97,8 +97,8 @@ A **world-class, production-ready** personal portfolio website for an Intelligen
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/ermiyasassefa/ai-portfolio.git
-cd ai-portfolio
+git clone https://github.com/ERMIYASZEWDU/ermiyas-portfolio.git
+cd ermiyas-portfolio
 ```
 
 2. **Install dependencies**
@@ -209,9 +209,9 @@ Contributions, issues, and feature requests are welcome!
 ## 👤 Author
 
 **Ermiyas Zewdu Assef**
-- GitHub: [@ermiyasassefa](https://github.com/ermiyasassefa)
-- LinkedIn: [Ermiyas Zewdu](https://linkedin.com/in/ermiyas-zewdu)
-- Email: ermiyaszewdu@example.com
+- GitHub: [@ERMIYASZEWDU](https://github.com/ERMIYASZEWDU)
+- LinkedIn: [Ermiyas Zewdu](https://www.linkedin.com/in/ermiyas2)
+- Email: ermiyaszewdu266@gmail.com
 
 ## 🙏 Acknowledgments
 
