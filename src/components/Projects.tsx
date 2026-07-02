@@ -14,7 +14,7 @@ const Projects = () => {
       problem: 'Real estate pricing is complex and varies based on multiple factors making it difficult to determine accurate property values.',
       solution: 'Built a regression model using Random Forest and XGBoost to predict house prices based on location, size, amenities, and market trends.',
       tech: ['Python', 'Scikit-learn', 'Pandas', 'XGBoost', 'Feature Engineering'],
-      github: 'https://github.com/ERMIYASZEWDU/house-price-prediction',
+      github: 'https://github.com/ERMIYASZEWDU/House-Price-Prediction',
       demo: '#',
       color: 'from-blue-500 to-cyan-500',
     },
