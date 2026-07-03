@@ -34,7 +34,7 @@ const Projects = () => {
       problem: 'Business stakeholders need clear, actionable insights from complex sales data across multiple regions and time periods.',
       solution: 'Created an interactive visualization dashboard using Python and Plotly to analyze sales trends, regional performance, and customer segments.',
       tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Plotly'],
-      github: 'https://github.com/ERMIYASZEWDU/sales-analytics-dashboard',
+      github: 'https://github.com/ERMIYASZEWDU/sales-dashboard',
       demo: '#',
       color: 'from-green-500 to-emerald-500',
     },
