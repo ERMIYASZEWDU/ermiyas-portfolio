@@ -9,40 +9,34 @@ const Certifications = () => {
 
   const certifications = [
     {
-      title: 'Machine Learning Specialization',
-      issuer: 'Coursera / Stanford University',
+      title: 'Web Development',
+      issuer: 'Udacity',
       date: '2024',
-      badge: '🏆',
+      badge: '�',
     },
     {
-      title: 'Python for Data Science',
-      issuer: 'IBM / Coursera',
-      date: '2023',
-      badge: '🐍',
+      title: 'Artificial Intelligence',
+      issuer: 'Udacity',
+      date: '2024',
+      badge: '🤖',
     },
     {
-      title: 'Data Science Professional Certificate',
-      issuer: 'Harvard University',
-      date: '2023',
+      title: 'Data Science',
+      issuer: 'Udacity',
+      date: '2024',
       badge: '📊',
     },
     {
-      title: 'Deep Learning Fundamentals',
-      issuer: 'DeepLearning.AI',
-      date: '2024',
-      badge: '🧠',
-    },
-    {
-      title: 'SQL for Data Analysis',
+      title: 'Android Development',
       issuer: 'Udacity',
-      date: '2023',
-      badge: '💾',
+      date: '2024',
+      badge: '�',
     },
     {
-      title: 'IT Support Specialist',
-      issuer: 'Google / Coursera',
-      date: '2022',
-      badge: '🔧',
+      title: 'Graphics Designer',
+      issuer: 'Udemy',
+      date: '2024',
+      badge: '🎨',
     },
   ];
 
