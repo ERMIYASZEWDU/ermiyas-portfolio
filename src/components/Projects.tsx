@@ -8,6 +8,7 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true });
 
   const projects = [
+    // Updated Sales Dashboard link - force deployment
     {
       title: 'House Price Prediction',
       icon: <TrendingUp className="w-6 h-6" />,
