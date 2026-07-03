@@ -24,7 +24,7 @@ const Projects = () => {
       problem: 'Companies lose revenue when customers leave without warning. Early detection can enable retention strategies.',
       solution: 'Developed a classification model to predict customer churn with 89% accuracy using ensemble methods and feature importance analysis.',
       tech: ['Python', 'Classification', 'Random Forest', 'GridSearchCV', 'SMOTE'],
-      github: 'https://github.com/ERMIYASZEWDU/churn-prediction',
+      github: 'https://github.com/ERMIYASZEWDU/customer-churn-prediction',
       demo: '#',
       color: 'from-purple-500 to-pink-500',
     },
