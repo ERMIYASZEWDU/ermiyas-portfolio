@@ -28,6 +28,7 @@ html:not(.dark) body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Account for fixed navbar height */
   -webkit-tap-highlight-color: transparent;
 }
 

@@ -19,6 +19,25 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1); // Remove the '#'
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const navbarHeight = 100; // Fixed navbar height
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    
+    setIsOpen(false); // Close mobile menu if open
+  };
+
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
@@ -51,7 +70,8 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-primary-400 transition-colors"
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-gray-300 hover:text-primary-400 transition-colors cursor-pointer"
                 whileHover={{ y: -2 }}
               >
                 {link.name}
@@ -85,8 +105,8 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-3 text-gray-300 hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="block py-3 text-gray-300 hover:text-primary-400 transition-colors cursor-pointer"
               >
                 {link.name}
               </a>
