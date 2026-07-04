@@ -55,7 +55,7 @@ const Projects = () => {
       problem: 'HR departments need data-driven salary recommendations to maintain competitive and fair compensation structures.',
       solution: 'Developed a regression model to predict employee salaries based on experience, education, role, and industry benchmarks.',
       tech: ['Python', 'Linear Regression', 'Feature Engineering', 'NumPy', 'Scikit-learn'],
-      github: 'https://github.com/ERMIYASZEWDU/salary-prediction',
+      github: 'https://github.com/ERMIYASZEWDU/employee-salary-prediction',
       demo: '#',
       color: 'from-yellow-500 to-orange-500',
     },
