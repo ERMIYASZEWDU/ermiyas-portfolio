@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, Download, ChevronDown } from 'lucide-react';
-import profilePhoto from '../photo_2026-06-29_09-03-33.jpg';
+import profilePhoto from '../assets/photo_2026-06-29_09-03-33.jpg';
 
 const Hero = () => {
   const [text, setText] = useState('');
