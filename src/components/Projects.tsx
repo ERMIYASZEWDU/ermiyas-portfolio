@@ -45,7 +45,7 @@ const Projects = () => {
       problem: 'Educational institutions need to identify at-risk students early to provide targeted support.',
       solution: 'Built a predictive model to forecast student academic performance based on attendance, assignments, and demographic factors.',
       tech: ['Python', 'Regression', 'Feature Selection', 'Model Evaluation', 'Data Preprocessing'],
-      github: 'https://github.com/ERMIYASZEWDU/student-performance',
+      github: 'https://github.com/ERMIYASZEWDU/studestudent-performance-predictionnt-performance-prediction',
       demo: '#',
       color: 'from-orange-500 to-red-500',
     },
