@@ -59,7 +59,7 @@ const Hero = () => {
         {/* Profile Image */}
         <motion.div variants={itemVariants} className="mb-8 flex justify-center">
           <div className="relative">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary-500 via-purple-500 to-cyan-500 p-1 animate-glow">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary-500 via-purple-500 to-cyan-500 p-1 glow-effect">
               <img 
                 src={profilePhoto} 
                 alt="Ermiyas Zewdu" 
@@ -71,7 +71,7 @@ const Hero = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="text-6xl md:text-8xl font-bold mb-6"
+          className="heading-xl mb-6"
         >
           Ermiyas <span className="gradient-text">Zewdu</span>
         </motion.h1>
