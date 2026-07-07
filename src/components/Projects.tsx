@@ -65,7 +65,7 @@ const Projects = () => {
       problem: 'Customer service teams are overwhelmed with repetitive queries that could be automated.',
       solution: 'Built an intelligent chatbot using NLP techniques to handle common customer inquiries with intent recognition and entity extraction.',
       tech: ['Python', 'NLP', 'NLTK', 'Intent Classification', 'Regex'],
-      github: 'https://github.com/ERMIYASZEWDU/ai-chatbot',
+      github: 'https://github.com/ERMIYASZEWDU/ai-chatbot-nlp',
       demo: '#',
       color: 'from-indigo-500 to-purple-500',
     },
