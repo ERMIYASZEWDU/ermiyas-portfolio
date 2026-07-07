@@ -13,6 +13,22 @@ body {
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  font-weight: 700 !important;
+}
+
+/* Make all text elements bold */
+*, *::before, *::after {
+  font-weight: 700 !important;
+}
+
+/* Extra bold for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900 !important;
+}
+
+/* Bold for all text elements */
+p, span, div, a, button, input, textarea, label {
+  font-weight: 700 !important;
 }
 
 /* Dark Mode (Default) */

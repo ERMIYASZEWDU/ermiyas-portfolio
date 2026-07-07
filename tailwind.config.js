@@ -39,6 +39,16 @@ export default {
         sans: ['Times New Roman', 'Times', 'serif'],
         display: ['Times New Roman', 'Times', 'serif'],
       },
+      fontWeight: {
+        'thin': '100',
+        'light': '300',
+        'normal': '700', // Changed default normal to bold
+        'medium': '700',
+        'semibold': '800',
+        'bold': '900',
+        'extrabold': '900',
+        'black': '900',
+      },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
         'sm': ['0.875rem', { lineHeight: '1.25rem' }],
