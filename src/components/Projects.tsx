@@ -66,7 +66,7 @@ const Projects = () => {
       solution: 'Built an intelligent chatbot using NLP techniques to handle common customer inquiries with intent recognition and entity extraction.',
       tech: ['Python', 'NLP', 'NLTK', 'Intent Classification', 'Regex'],
       github: 'https://github.com/ERMIYASZEWDU/ai-chatbot-nlp',
-      demo: '#',
+      demo: 'https://ai-chatbot-nlp1.streamlit.app/',
       color: 'from-indigo-500 to-purple-500',
     },
   ];
