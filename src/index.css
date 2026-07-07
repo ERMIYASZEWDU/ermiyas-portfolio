@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,23 +15,133 @@ body {
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-  font-weight: 700 !important;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
 }
 
-/* Make all text elements bold */
+/* Remove previous bold overrides */
 *, *::before, *::after {
-  font-weight: 700 !important;
+  font-weight: inherit;
 }
 
-/* Extra bold for headings */
+/* Typography System */
+.text-hero {
+  font-size: clamp(3.5rem, 8vw, 4.5rem); /* 56-72px */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-section-heading {
+  font-size: clamp(2.25rem, 5vw, 3rem); /* 36-48px */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.text-body {
+  font-size: clamp(1rem, 2vw, 1.125rem); /* 16-18px */
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: -0.005em;
+}
+
+.text-small {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Headings with Space Grotesk */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900 !important;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
-/* Bold for all text elements */
-p, span, div, a, button, input, textarea, label {
-  font-weight: 700 !important;
+/* Body text with Inter */
+p, span, div:not(.heading), a, button, input, textarea, label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: -0.005em;
 }
+
+/* Code elements with JetBrains Mono */
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Enhanced typography for better readability */
+.text-primary {
+  color: rgb(255 255 255 / 0.95);
+}
+
+.text-secondary {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.text-muted {
+  color: rgb(255 255 255 / 0.5);
+}
+
+/* Light mode text colors */
+html:not(.dark) .text-primary {
+  color: rgb(15 23 42 / 0.95);
+}
+
+html:not(.dark) .text-secondary {
+  color: rgb(15 23 42 / 0.7);
+}
+
+html:not(.dark) .text-muted {
+  color: rgb(15 23 42 / 0.5);
+}
+
+/* Premium typography utilities */
+.font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Button typography */
+button, .btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+/* Link typography */
+a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  transition: all 0.2s ease;
+}
+
+/* Form typography */
+input, textarea, select {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* Modern typography hierarchy */
+.typography-scale h1 { @apply font-heading text-hero font-extrabold text-primary; }
+.typography-scale h2 { @apply font-heading text-section-heading font-bold text-primary; }
+.typography-scale h3 { @apply font-heading text-3xl font-bold text-primary; }
+.typography-scale h4 { @apply font-heading text-2xl font-semibold text-primary; }
+.typography-scale h5 { @apply font-heading text-xl font-semibold text-primary; }
+.typography-scale h6 { @apply font-heading text-lg font-semibold text-primary; }
+.typography-scale p { @apply text-body text-secondary; }
+.typography-scale small { @apply text-small text-muted; }
 
 /* Dark Mode (Default) */
 body {

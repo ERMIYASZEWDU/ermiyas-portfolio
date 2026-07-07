@@ -81,11 +81,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4">
+          <h2 className="font-heading text-section-heading font-bold mb-4 text-primary">
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-cyan-600 mx-auto mb-4"></div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-body text-secondary max-w-2xl mx-auto">
             Have a project in mind or want to discuss opportunities? I'd love to hear from you!
           </p>
         </motion.div>
@@ -98,7 +98,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <form onSubmit={handleSubmit} className="glass rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="font-heading text-2xl font-bold text-primary mb-6">Send a Message</h3>
 
               <div className="space-y-6">
                 <div>

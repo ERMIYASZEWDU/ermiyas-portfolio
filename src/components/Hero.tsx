@@ -71,13 +71,13 @@ const Hero = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="heading-xl mb-6"
+          className="font-heading text-hero font-extrabold mb-6 text-primary"
         >
           Ermiyas <span className="gradient-text">Zewdu</span>
         </motion.h1>
 
         <motion.div variants={itemVariants} className="h-16 mb-6">
-          <p className="text-2xl md:text-4xl gradient-text font-semibold">
+          <p className="font-heading text-section-heading gradient-text font-bold">
             {text}
             <span className="animate-pulse">|</span>
           </p>
@@ -85,7 +85,7 @@ const Hero = () => {
 
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto"
+          className="text-body text-secondary mb-12 max-w-3xl mx-auto"
         >
           Turning data into intelligent systems.
         </motion.p>
