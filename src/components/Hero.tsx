@@ -6,7 +6,7 @@ import profilePhoto from '../assets/photo_2026-06-29_09-03-33.jpg';
 const Hero = () => {
   const [text, setText] = useState('');
   const [roleIndex, setRoleIndex] = useState(0);
-  const roles = ['AI Engineer', 'Data Scientist', 'Machine Learning Developer'];
+  const roles = ['AI Engineer', 'Data Scientist', 'Machine Learning Developer', 'Web Developer', 'Python Developer'];
   const fullText = roles[roleIndex];
 
   useEffect(() => {
