@@ -7,6 +7,35 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        'xs': '475px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        '3xl': '1920px',
+        '4xl': '2560px',
+      },
+      maxWidth: {
+        'xs': '475px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        '3xl': '1800px',
+        '4xl': '2200px',
+        '5xl': '2400px',
+        'full': '100%',
+        'screen-sm': '640px',
+        'screen-md': '768px',
+        'screen-lg': '1024px',
+        'screen-xl': '1280px',
+        'screen-2xl': '1536px',
+        'screen-3xl': '1800px',
+        'screen-4xl': '2200px',
+      },
       colors: {
         primary: {
           50: '#f0f9ff',
@@ -66,10 +95,10 @@ export default {
         '7xl': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }], // 72px - Hero heading max
         '8xl': ['6rem', { lineHeight: '1', letterSpacing: '-0.025em' }],
         '9xl': ['8rem', { lineHeight: '1', letterSpacing: '-0.025em' }],
-        // Custom typography classes
-        'hero': ['clamp(3.5rem, 8vw, 4.5rem)', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
-        'section-heading': ['clamp(2.25rem, 5vw, 3rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
-        'body': ['clamp(1rem, 2vw, 1.125rem)', { lineHeight: '1.7', letterSpacing: '-0.005em', fontWeight: '500' }],
+        // Custom typography classes with better desktop scaling
+        'hero': ['clamp(3.5rem, 8vw, 6rem)', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'section-heading': ['clamp(2.25rem, 5vw, 4rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
+        'body': ['clamp(1rem, 2vw, 1.25rem)', { lineHeight: '1.7', letterSpacing: '-0.005em', fontWeight: '500' }],
         'small': ['0.875rem', { lineHeight: '1.6', letterSpacing: '0', fontWeight: '400' }],
       },
       spacing: {

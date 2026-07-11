@@ -25,23 +25,23 @@ body {
   font-weight: inherit;
 }
 
-/* Typography System */
+/* Typography System - Enhanced for Desktop */
 .text-hero {
-  font-size: clamp(3.5rem, 8vw, 4.5rem); /* 56-72px */
+  font-size: clamp(3.5rem, 8vw, 6rem); /* 56-96px enhanced range */
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .text-section-heading {
-  font-size: clamp(2.25rem, 5vw, 3rem); /* 36-48px */
+  font-size: clamp(2.25rem, 5vw, 4rem); /* 36-64px enhanced range */
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.015em;
 }
 
 .text-body {
-  font-size: clamp(1rem, 2vw, 1.125rem); /* 16-18px */
+  font-size: clamp(1rem, 2vw, 1.25rem); /* 16-20px enhanced range */
   font-weight: 500;
   line-height: 1.7;
   letter-spacing: -0.005em;
@@ -963,4 +963,268 @@ button,
 * {
   border-style: solid;
   border-width: 0;
+}
+/* =================================
+   DESKTOP RESPONSIVENESS ENHANCEMENTS
+   ================================= */
+
+/* Enhanced container system for large screens */
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .max-w-7xl {
+    max-width: 2200px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .max-w-7xl {
+    max-width: 2400px;
+  }
+}
+
+/* Desktop typography improvements */
+@media (min-width: 1536px) {
+  .text-hero {
+    font-size: clamp(4rem, 6vw, 7rem);
+  }
+  
+  .text-section-heading {
+    font-size: clamp(2.5rem, 4vw, 5rem);
+  }
+  
+  .text-body {
+    font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+  }
+  
+  .text-lg {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  }
+}
+
+/* Desktop spacing optimizations */
+@media (min-width: 1536px) {
+  /* Hero section enhancements */
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  /* Section padding adjustments */
+  .py-20 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  /* Grid improvements for large screens */
+  .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Skills section grid enhancement */
+  .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6.xl\:grid-cols-7 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (min-width: 1920px) {
+  .py-20 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  
+  /* Ultra-wide project grid */
+  .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Enhanced skills grid for ultra-wide */
+  .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6.xl\:grid-cols-7 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  /* About section grid enhancement */
+  .grid.md\:grid-cols-2 {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+  }
+  
+  /* Contact section layout improvement */
+  .grid.lg\:grid-cols-2 {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  /* 4K display optimizations */
+  .py-20 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  
+  .text-hero {
+    font-size: clamp(5rem, 4vw, 8rem);
+  }
+  
+  .text-section-heading {
+    font-size: clamp(3rem, 3vw, 6rem);
+  }
+  
+  /* Ultra-wide grid layouts */
+  .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6.xl\:grid-cols-7 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* Full viewport utilization */
+@media (min-width: 1536px) {
+  /* Remove unnecessary horizontal margins on large screens */
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Optimize horizontal padding for wide screens */
+  .px-4.sm\:px-6.lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .px-4.sm\:px-6.lg\:px-8 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .px-4.sm\:px-6.lg\:px-8 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Desktop background enhancements */
+@media (min-width: 1536px) {
+  /* Floating elements scale better on large screens */
+  .w-72.h-72 {
+    width: 24rem;
+    height: 24rem;
+  }
+  
+  .w-96.h-96 {
+    width: 32rem;
+    height: 32rem;
+  }
+  
+  .w-80.h-80 {
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .w-72.h-72 {
+    width: 36rem;
+    height: 36rem;
+  }
+  
+  .w-96.h-96 {
+    width: 48rem;
+    height: 48rem;
+  }
+  
+  .w-80.h-80 {
+    width: 42rem;
+    height: 42rem;
+  }
+}
+
+/* Enhanced navbar for desktop */
+@media (min-width: 1536px) {
+  .fixed.w-full.z-50 nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Desktop grid background scaling */
+@media (min-width: 1920px) {
+  .grid-bg {
+    background-size: 120px 120px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .grid-bg {
+    background-size: 150px 150px;
+  }
+}
+
+/* Button and interactive elements scaling */
+@media (min-width: 1536px) {
+  .px-8.py-4 {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktop card enhancements */
+@media (min-width: 1536px) {
+  .glass.rounded-2xl.p-6 {
+    padding: 2rem;
+  }
+  
+  .glass.rounded-2xl.p-8 {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .glass.rounded-2xl.p-6 {
+    padding: 3rem;
+  }
+  
+  .glass.rounded-2xl.p-8 {
+    padding: 3.5rem;
+  }
+}
+
+/* Skills section desktop optimizations */
+@media (min-width: 1536px) {
+  .h-24 {
+    height: 7rem;
+  }
+}
+
+/* Contact form desktop improvements */
+@media (min-width: 1536px) {
+  .px-4.py-3 {
+    padding: 1rem 1.25rem;
+  }
+  
+  input, textarea {
+    font-size: 1.125rem;
+  }
+}
+
+/* Mobile-first approach preservation */
+@media (max-width: 767px) {
+  .max-w-7xl {
+    max-width: 100%;
+  }
+  
+  .px-4.sm\:px-6.lg\:px-8 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
