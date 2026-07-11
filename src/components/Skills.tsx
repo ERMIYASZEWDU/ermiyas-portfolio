@@ -2,48 +2,21 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { 
-  // Programming Languages
-  FileCode2,
-  Coffee,
-  Globe,
-  Database,
-  Code2,
-  Palette,
-  
-  // AI & ML
   Brain,
-  TrendingUp,
+  Database,
   BarChart3,
-  Calculator,
-  Eye,
-  
-  // Data Science
-  PieChart,
-  Activity,
-  FileSpreadsheet,
-  LineChart,
-  Zap,
-  
-  // Web Development
-  Atom,
-  Wind,
-  Layout,
-  Server,
-  
-  // Databases
-  HardDrive,
-  Layers,
-  Flame,
-  
-  // Tools & Platforms
-  GitBranch,
-  Github,
-  Monitor,
+  Globe,
+  Settings,
   BookOpen,
   Cloud,
-  Terminal,
-  Settings
+  LineChart,
+  PieChart
 } from 'lucide-react';
+
+// Technology Logo Component
+const TechLogo = ({ src, alt, className = "w-6 h-6" }: { src: string; alt: string; className?: string }) => (
+  <img src={src} alt={alt} className={`${className} object-contain`} />
+);
 
 const Skills = () => {
   const ref = useRef(null);
@@ -52,15 +25,39 @@ const Skills = () => {
   const skillCategories = [
     {
       category: 'Programming Languages',
-      icon: <Code2 className="w-5 h-5" />,
+      icon: <Globe className="w-5 h-5" />,
       color: 'from-blue-500 to-cyan-500',
       skills: [
-        { name: 'Python', icon: <FileCode2 className="w-6 h-6" />, color: 'text-yellow-400' },
-        { name: 'Java', icon: <Coffee className="w-6 h-6" />, color: 'text-orange-500' },
-        { name: 'JavaScript', icon: <Globe className="w-6 h-6" />, color: 'text-yellow-300' },
-        { name: 'SQL', icon: <Database className="w-6 h-6" />, color: 'text-blue-400' },
-        { name: 'HTML5', icon: <Code2 className="w-6 h-6" />, color: 'text-orange-400' },
-        { name: 'CSS3', icon: <Palette className="w-6 h-6" />, color: 'text-blue-500' },
+        { 
+          name: 'Python', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />, 
+          color: 'text-yellow-400' 
+        },
+        { 
+          name: 'Java', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />, 
+          color: 'text-orange-500' 
+        },
+        { 
+          name: 'JavaScript', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />, 
+          color: 'text-yellow-300' 
+        },
+        { 
+          name: 'SQL', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />, 
+          color: 'text-blue-400' 
+        },
+        { 
+          name: 'HTML5', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />, 
+          color: 'text-orange-400' 
+        },
+        { 
+          name: 'CSS3', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />, 
+          color: 'text-blue-500' 
+        },
       ],
     },
     {
@@ -68,11 +65,31 @@ const Skills = () => {
       icon: <Brain className="w-5 h-5" />,
       color: 'from-purple-500 to-pink-500',
       skills: [
-        { name: 'Scikit-learn', icon: <Brain className="w-6 h-6" />, color: 'text-orange-400' },
-        { name: 'TensorFlow', icon: <TrendingUp className="w-6 h-6" />, color: 'text-orange-500' },
-        { name: 'Pandas', icon: <BarChart3 className="w-6 h-6" />, color: 'text-blue-400' },
-        { name: 'NumPy', icon: <Calculator className="w-6 h-6" />, color: 'text-blue-500' },
-        { name: 'OpenCV', icon: <Eye className="w-6 h-6" />, color: 'text-red-500' },
+        { 
+          name: 'Scikit-learn', 
+          icon: <TechLogo src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" />, 
+          color: 'text-orange-400' 
+        },
+        { 
+          name: 'TensorFlow', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />, 
+          color: 'text-orange-500' 
+        },
+        { 
+          name: 'Pandas', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />, 
+          color: 'text-blue-400' 
+        },
+        { 
+          name: 'NumPy', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />, 
+          color: 'text-blue-500' 
+        },
+        { 
+          name: 'OpenCV', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" />, 
+          color: 'text-red-500' 
+        },
       ],
     },
     {
@@ -80,11 +97,56 @@ const Skills = () => {
       icon: <BarChart3 className="w-5 h-5" />,
       color: 'from-green-500 to-emerald-500',
       skills: [
-        { name: 'Matplotlib', icon: <PieChart className="w-6 h-6" />, color: 'text-blue-400' },
-        { name: 'Power BI', icon: <Activity className="w-6 h-6" />, color: 'text-yellow-500' },
-        { name: 'Excel', icon: <FileSpreadsheet className="w-6 h-6" />, color: 'text-green-500' },
+        { 
+          name: 'Matplotlib', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" />, 
+          color: 'text-blue-400' 
+        },
+        { 
+          name: 'Power BI', 
+          icon: <TechLogo src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" />, 
+          color: 'text-yellow-500' 
+        },
+        { 
+          name: 'Excel', 
+          icon: <TechLogo src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" />, 
+          color: 'text-green-500' 
+        },
+        { 
+          name: 'Data Analysis', 
+          icon: <LineChart className="w-6 h-6" />, 
+          color: 'text-purple-400' 
+        },
+        { 
+          name: 'Data Visualization', 
+          icon: <PieChart className="w-6 h-6" />, 
+          color: 'text-cyan-400' 
+        },
+      ],
+    },
+    {
+      category: 'Data Science & Analytics',
+      icon: <BarChart3 className="w-5 h-5" />,
+      color: 'from-green-500 to-emerald-500',
+      skills: [
+        { name: 'Matplotlib', icon: (
+          <svg viewBox="0 0 24 24" className="w-6 h-6">
+            <path fill="#11557c" d="M12.015 0L0 6.84v10.32L12.015 24 24 17.16V6.84L12.015 0z"/>
+          </svg>
+        ), color: 'text-blue-400' },
+        { name: 'Power BI', icon: (
+          <svg viewBox="0 0 24 24" className="w-6 h-6">
+            <path fill="#f2c811" d="M12 24L0 12h24L12 24z"/>
+          </svg>
+        ), color: 'text-yellow-500' },
+        { name: 'Excel', icon: (
+          <svg viewBox="0 0 24 24" className="w-6 h-6">
+            <path fill="#217346" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+            <path fill="#fff" d="M14.5 18L12 15.5 9.5 18 8 16.5 10.5 14 8 11.5 9.5 10 12 12.5 14.5 10 16 11.5 13.5 14 16 16.5z"/>
+          </svg>
+        ), color: 'text-green-500' },
         { name: 'Data Analysis', icon: <LineChart className="w-6 h-6" />, color: 'text-purple-400' },
-        { name: 'Data Visualization', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
+        { name: 'Data Visualization', icon: <PieChart className="w-6 h-6" />, color: 'text-cyan-400' },
       ],
     },
     {
@@ -92,10 +154,26 @@ const Skills = () => {
       icon: <Globe className="w-5 h-5" />,
       color: 'from-cyan-500 to-blue-500',
       skills: [
-        { name: 'React', icon: <Atom className="w-6 h-6" />, color: 'text-cyan-400' },
-        { name: 'Tailwind CSS', icon: <Wind className="w-6 h-6" />, color: 'text-cyan-500' },
-        { name: 'Bootstrap', icon: <Layout className="w-6 h-6" />, color: 'text-purple-500' },
-        { name: 'PHP', icon: <Server className="w-6 h-6" />, color: 'text-purple-600' },
+        { 
+          name: 'React', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />, 
+          color: 'text-cyan-400' 
+        },
+        { 
+          name: 'Tailwind CSS', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" />, 
+          color: 'text-cyan-500' 
+        },
+        { 
+          name: 'Bootstrap', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />, 
+          color: 'text-purple-500' 
+        },
+        { 
+          name: 'PHP', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />, 
+          color: 'text-purple-600' 
+        },
       ],
     },
     {
@@ -103,9 +181,21 @@ const Skills = () => {
       icon: <Database className="w-5 h-5" />,
       color: 'from-indigo-500 to-purple-500',
       skills: [
-        { name: 'MySQL', icon: <HardDrive className="w-6 h-6" />, color: 'text-blue-500' },
-        { name: 'PostgreSQL', icon: <Layers className="w-6 h-6" />, color: 'text-blue-600' },
-        { name: 'Firebase', icon: <Flame className="w-6 h-6" />, color: 'text-orange-500' },
+        { 
+          name: 'MySQL', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />, 
+          color: 'text-blue-500' 
+        },
+        { 
+          name: 'PostgreSQL', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />, 
+          color: 'text-blue-600' 
+        },
+        { 
+          name: 'Firebase', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" />, 
+          color: 'text-orange-500' 
+        },
       ],
     },
     {
@@ -113,13 +203,41 @@ const Skills = () => {
       icon: <Settings className="w-5 h-5" />,
       color: 'from-orange-500 to-red-500',
       skills: [
-        { name: 'Git', icon: <GitBranch className="w-6 h-6" />, color: 'text-orange-500' },
-        { name: 'GitHub', icon: <Github className="w-6 h-6" />, color: 'text-gray-400' },
-        { name: 'VS Code', icon: <Monitor className="w-6 h-6" />, color: 'text-blue-500' },
-        { name: 'Jupyter Notebook', icon: <BookOpen className="w-6 h-6" />, color: 'text-orange-400' },
-        { name: 'Google Colab', icon: <Cloud className="w-6 h-6" />, color: 'text-yellow-500' },
-        { name: 'Linux', icon: <Terminal className="w-6 h-6" />, color: 'text-green-400' },
-        { name: 'XAMPP', icon: <Settings className="w-6 h-6" />, color: 'text-orange-600' },
+        { 
+          name: 'Git', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />, 
+          color: 'text-orange-500' 
+        },
+        { 
+          name: 'GitHub', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />, 
+          color: 'text-gray-400' 
+        },
+        { 
+          name: 'VS Code', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />, 
+          color: 'text-blue-500' 
+        },
+        { 
+          name: 'Jupyter Notebook', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter Notebook" />, 
+          color: 'text-orange-400' 
+        },
+        { 
+          name: 'Google Colab', 
+          icon: <Cloud className="w-6 h-6" />, 
+          color: 'text-yellow-500' 
+        },
+        { 
+          name: 'Linux', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />, 
+          color: 'text-green-400' 
+        },
+        { 
+          name: 'XAMPP', 
+          icon: <Settings className="w-6 h-6" />, 
+          color: 'text-orange-600' 
+        },
       ],
     },
   ];
