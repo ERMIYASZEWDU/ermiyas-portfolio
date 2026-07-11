@@ -197,7 +197,6 @@ html:not(.dark) body {
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   color: #0f172a;
-  position: relative;
 }
 
 /* Light mode background pattern */
@@ -214,10 +213,6 @@ html:not(.dark) body::before {
     radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.04) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
-}
-
-html:not(.dark) * {
-  position: relative;
 }
 
 html {
@@ -321,7 +316,7 @@ html:not(.dark) .glass:hover {
     0 20px 40px rgba(14, 165, 233, 0.15),
     0 8px 24px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 1);
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 /* Advanced Gradient Text */
@@ -457,7 +452,7 @@ html:not(.dark) .modern-card::before {
 }
 
 html:not(.dark) .modern-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) rotateX(5deg) rotateY(5deg);
   box-shadow: 
     0 20px 40px rgba(14, 165, 233, 0.12),
     0 8px 24px rgba(0, 0, 0, 0.08),
@@ -780,9 +775,13 @@ html:not(.dark) .bg-gradient-to-br.from-primary-600\/20.to-purple-600\/20 {
   ) !important;
 }
 
-/* Light Mode Smooth Transitions */
-html:not(.dark) * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+/* Light Mode Smooth Transitions - Apply only to specific properties */
+html:not(.dark) .glass,
+html:not(.dark) .modern-card,
+html:not(.dark) .modern-button,
+html:not(.dark) a,
+html:not(.dark) button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Light Mode Footer and Contact Section */
@@ -817,4 +816,151 @@ html:not(.dark) .bg-cyan-600\/20 {
   html:not(.dark) body {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
   }
+}
+
+/* =================================
+   LAYOUT STABILITY FIXES
+   ================================= */
+
+/* Ensure consistent dimensions across themes */
+.glass,
+.modern-card,
+.modern-button {
+  box-sizing: border-box;
+}
+
+/* Prevent border-width changes from affecting layout */
+html:not(.dark) .glass,
+html:not(.dark) .modern-card {
+  border-width: 1px;
+}
+
+/* Consistent padding and margins */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6,
+html:not(.dark) p {
+  margin: inherit;
+  padding: inherit;
+}
+
+/* Prevent pseudo-elements from affecting layout */
+html:not(.dark) body::before {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Consistent scrollbar to prevent horizontal shifts */
+html {
+  overflow-y: scroll;
+}
+
+/* Prevent content jumping during theme transition */
+* {
+  will-change: auto;
+}
+
+/* Stabilize transform origins */
+.glass,
+.modern-card {
+  transform-origin: center;
+}
+
+/* Ensure consistent line heights */
+html:not(.dark) * {
+  line-height: inherit;
+}
+/* =================================
+   NAVBAR AND LAYOUT STABILITY FIXES
+   ================================= */
+
+/* Ensure navbar maintains consistent height and padding */
+nav {
+  box-sizing: border-box;
+}
+
+/* Prevent theme toggle button from changing size */
+button {
+  box-sizing: border-box;
+}
+
+/* Consistent mobile menu dimensions */
+.md\:hidden .glass {
+  box-sizing: border-box;
+}
+
+/* Prevent icon size changes from affecting layout */
+svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Mobile menu consistent spacing */
+html:not(.dark) .border-t.border-white\/10 {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Consistent line heights across themes */
+html:not(.dark) * {
+  line-height: inherit;
+}
+
+/* Prevent layout jumping during theme transitions */
+* {
+  will-change: auto;
+}
+
+/* Force consistent scrollbar to prevent horizontal shifts */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* Stabilize all transform origins */
+.glass,
+.modern-card,
+.animate-float {
+  transform-origin: center;
+}
+
+/* Prevent pseudo-element layout shifts */
+.glass::before,
+.modern-card::before,
+.grid-bg::before,
+.glow-effect::before {
+  box-sizing: border-box;
+}
+
+/* Ensure consistent dimensions for gradient text */
+.gradient-text {
+  display: inline-block;
+}
+
+/* Prevent framer-motion layout shifts */
+[data-framer-component] {
+  box-sizing: border-box;
+}
+
+/* Lock minimum heights to prevent content jumping */
+section {
+  min-height: fit-content;
+}
+
+/* Consistent button dimensions */
+button,
+.btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prevent border width changes from affecting layout */
+* {
+  border-style: solid;
+  border-width: 0;
 }
