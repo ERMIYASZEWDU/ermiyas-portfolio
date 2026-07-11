@@ -125,31 +125,6 @@ const Skills = () => {
       ],
     },
     {
-      category: 'Data Science & Analytics',
-      icon: <BarChart3 className="w-5 h-5" />,
-      color: 'from-green-500 to-emerald-500',
-      skills: [
-        { name: 'Matplotlib', icon: (
-          <svg viewBox="0 0 24 24" className="w-6 h-6">
-            <path fill="#11557c" d="M12.015 0L0 6.84v10.32L12.015 24 24 17.16V6.84L12.015 0z"/>
-          </svg>
-        ), color: 'text-blue-400' },
-        { name: 'Power BI', icon: (
-          <svg viewBox="0 0 24 24" className="w-6 h-6">
-            <path fill="#f2c811" d="M12 24L0 12h24L12 24z"/>
-          </svg>
-        ), color: 'text-yellow-500' },
-        { name: 'Excel', icon: (
-          <svg viewBox="0 0 24 24" className="w-6 h-6">
-            <path fill="#217346" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-            <path fill="#fff" d="M14.5 18L12 15.5 9.5 18 8 16.5 10.5 14 8 11.5 9.5 10 12 12.5 14.5 10 16 11.5 13.5 14 16 16.5z"/>
-          </svg>
-        ), color: 'text-green-500' },
-        { name: 'Data Analysis', icon: <LineChart className="w-6 h-6" />, color: 'text-purple-400' },
-        { name: 'Data Visualization', icon: <PieChart className="w-6 h-6" />, color: 'text-cyan-400' },
-      ],
-    },
-    {
       category: 'Web Development',
       icon: <Globe className="w-5 h-5" />,
       color: 'from-cyan-500 to-blue-500',
