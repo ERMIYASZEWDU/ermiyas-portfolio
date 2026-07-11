@@ -142,7 +142,7 @@ const Skills = () => {
         },
         { 
           name: 'Tailwind CSS', 
-          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" />, 
+          icon: <TechLogo src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" />, 
           color: 'text-cyan-500' 
         },
         { 
