@@ -24,8 +24,8 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      darkMode ? 'bg-dark-bg' : 'bg-gray-50'
+    <div className={`min-h-screen transition-all duration-500 ${
+      darkMode ? 'bg-dark-bg' : 'bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100'
     }`}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
