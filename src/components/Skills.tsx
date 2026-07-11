@@ -45,19 +45,14 @@ const Skills = () => {
           color: 'text-yellow-300' 
         },
         { 
+          name: 'PHP', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />, 
+          color: 'text-purple-600' 
+        },
+        { 
           name: 'SQL', 
           icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />, 
           color: 'text-blue-400' 
-        },
-        { 
-          name: 'HTML5', 
-          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />, 
-          color: 'text-orange-400' 
-        },
-        { 
-          name: 'CSS3', 
-          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />, 
-          color: 'text-blue-500' 
         },
       ],
     },
@@ -136,6 +131,16 @@ const Skills = () => {
           color: 'text-cyan-400' 
         },
         { 
+          name: 'HTML5', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />, 
+          color: 'text-orange-400' 
+        },
+        { 
+          name: 'CSS3', 
+          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />, 
+          color: 'text-blue-500' 
+        },
+        { 
           name: 'Tailwind CSS', 
           icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" />, 
           color: 'text-cyan-500' 
@@ -144,11 +149,6 @@ const Skills = () => {
           name: 'Bootstrap', 
           icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />, 
           color: 'text-purple-500' 
-        },
-        { 
-          name: 'PHP', 
-          icon: <TechLogo src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />, 
-          color: 'text-purple-600' 
         },
       ],
     },
