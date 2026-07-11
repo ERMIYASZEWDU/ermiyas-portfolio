@@ -10,7 +10,8 @@ import {
   BookOpen,
   Cloud,
   LineChart,
-  PieChart
+  PieChart,
+  FileSpreadsheet
 } from 'lucide-react';
 
 // Technology Logo Component
@@ -109,7 +110,7 @@ const Skills = () => {
         },
         { 
           name: 'Excel', 
-          icon: <TechLogo src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" />, 
+          icon: <FileSpreadsheet className="w-6 h-6" />, 
           color: 'text-green-500' 
         },
         { 
