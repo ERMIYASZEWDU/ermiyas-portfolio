@@ -11,6 +11,7 @@ import Certifications from './components/Certifications';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PWAInstall from './components/PWAInstall';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -39,6 +40,7 @@ function App() {
       <Blog />
       <Contact />
       <Footer />
+      <PWAInstall />
     </div>
   );
 }
