@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, X, Download } from 'lucide-react';
 
 interface NavbarProps {
   darkMode: boolean;
@@ -10,14 +10,36 @@ interface NavbarProps {
 const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+
+    const handleBeforeInstallPrompt = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
   }, []);
+
+  const handleInstallApp = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setDeferredPrompt(null);
+      }
+    }
+  };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -77,6 +99,19 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                 {link.name}
               </motion.a>
             ))}
+            
+            {/* Install App Button */}
+            {deferredPrompt && (
+              <button
+                onClick={handleInstallApp}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg glass hover:bg-primary-600/20 transition-colors touch-manipulation active:scale-95"
+                title="Install App"
+              >
+                <Download size={18} />
+                <span className="text-sm">Install</span>
+              </button>
+            )}
+            
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-lg glass hover:bg-primary-600/20 transition-colors touch-manipulation active:scale-95"

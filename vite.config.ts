@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.jpg', 'Ermiya_Resume.pdf'],
+      registerType: 'prompt',
+      includeAssets: ['favicon.jpg', 'icon-192.jpg', 'icon-512.jpg', 'Ermiya_Resume.pdf'],
       manifest: {
         name: 'Ermiya Zewdu - AI Engineer Portfolio',
         short_name: 'Ermiya Portfolio',
@@ -16,33 +16,47 @@ export default defineConfig({
         theme_color: '#0ea5e9',
         background_color: '#0a0a0f',
         display: 'standalone',
+        orientation: 'portrait-primary',
         scope: '/',
         start_url: '/',
+        id: '/',
         icons: [
           {
-            src: 'favicon.jpg',
+            src: 'icon-192.jpg',
             sizes: '192x192',
-            type: 'image/jpeg'
+            type: 'image/jpeg',
+            purpose: 'any'
+          },
+          {
+            src: 'icon-512.jpg', 
+            sizes: '512x512',
+            type: 'image/jpeg',
+            purpose: 'any'
           },
           {
             src: 'favicon.jpg',
+            sizes: '144x144',
+            type: 'image/jpeg',
+            purpose: 'any maskable'
+          }
+        ],
+        categories: ['portfolio', 'business', 'productivity'],
+        screenshots: [
+          {
+            src: 'icon-512.jpg',
             sizes: '512x512',
-            type: 'image/jpeg'
+            type: 'image/jpeg',
+            form_factor: 'wide'
           }
         ]
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg}'],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB limit
-        runtimeCaching: [
-          {
-            urlPattern: /\.pdf$/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'pdf-cache'
-            }
-          }
-        ]
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024
+      },
+      devOptions: {
+        enabled: true,
+        type: 'module'
       }
     })
   ],

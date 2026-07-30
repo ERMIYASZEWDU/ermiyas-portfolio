@@ -1,0 +1,87 @@
+{
+  "personal": {
+    "name": "Ermiyas Zewdu Assefa",
+    "role": "Computer Science Graduate | Intelligent Data & AI Engineering Student",
+    "bio": "I am a passionate Computer Science graduate from Ambo University, currently pursuing Intelligent Data & AI Engineering at Addis Ababa University through the Qiyas Program. I work as an IT Support Specialist at Tewos Technology Solutions and have a strong interest in Artificial Intelligence, Machine Learning, Data Science, and Full Stack Development."
+  },
+  "education": [
+    {
+      "degree": "BSc in Computer Science",
+      "institution": "Ambo University",
+      "status": "Completed"
+    },
+    {
+      "degree": "Intelligent Data & AI Engineering",
+      "institution": "Addis Ababa University",
+      "program": "Qiyas Program",
+      "status": "Current"
+    }
+  ],
+  "experience": [
+    {
+      "role": "IT Support Specialist",
+      "company": "Tewos Technology Solutions",
+      "status": "Current"
+    }
+  ],
+  "skills": {
+    "programming": ["Python", "Java", "JavaScript", "PHP"],
+    "frontend": ["React", "HTML", "CSS"],
+    "backend": ["Flask", "SQL"],
+    "dataScience": ["Machine Learning", "Data Analysis", "Pandas", "NumPy", "Scikit-learn", "OpenCV"],
+    "tools": ["Git", "GitHub"]
+  },
+  "projects": [
+    {
+      "name": "Face Recognition Attendance System",
+      "description": "A comprehensive attendance tracking system using facial recognition technology",
+      "technologies": ["Python", "OpenCV", "Flask", "Firebase"],
+      "category": "AI/ML"
+    },
+    {
+      "name": "Web-based Attendance Management System",
+      "description": "Modern web application for managing and tracking attendance",
+      "technologies": ["Web Development"],
+      "category": "Web Application"
+    },
+    {
+      "name": "Online Voting System",
+      "description": "Secure digital voting platform with authentication",
+      "technologies": ["Web Development"],
+      "category": "Web Application"
+    },
+    {
+      "name": "School Management System with AI Timetable Generation",
+      "description": "Intelligent school management platform with automated timetable scheduling using AI algorithms",
+      "technologies": ["AI", "Web Development"],
+      "category": "AI/Web Application"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Programming Fundamentals",
+      "provider": "Udacity"
+    },
+    {
+      "name": "Web Development",
+      "provider": "Udacity"
+    },
+    {
+      "name": "Data Analysis",
+      "provider": "Udacity"
+    },
+    {
+      "name": "Android Development",
+      "provider": "Udacity"
+    }
+  ],
+  "interests": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Data Science",
+    "Full Stack Development"
+  ],
+  "contact": {
+    "message": "Feel free to reach out through the contact section on this portfolio!"
+  }
+}
