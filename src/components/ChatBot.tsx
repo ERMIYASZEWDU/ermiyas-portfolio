@@ -14,6 +14,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Scroll to bottom when new messages arrive
@@ -24,6 +25,24 @@ const ChatBot = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Escape to close chat
+      if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+      }
+      // Alt + C to toggle chat
+      if (e.altKey && e.key === 'c') {
+        e.preventDefault();
+        setIsOpen(!isOpen);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
 
   // Welcome message when chat opens
   useEffect(() => {
@@ -59,6 +78,52 @@ const ChatBot = () => {
 
   const generateResponse = (userMessage: string): string => {
     const msg = userMessage.toLowerCase();
+
+    // Thank you / Appreciation
+    if (msg.match(/\b(thank|thanks|appreciate|awesome|great|cool|nice)\b/)) {
+      const responses = [
+        `You're welcome! 😊 I'm always here to help you learn about Ermiyas. Is there anything else you'd like to know?`,
+        `My pleasure! 🎉 Feel free to ask me anything else about Ermiyas's skills, projects, or experience!`,
+        `Glad I could help! 💙 Don't hesitate to ask if you have more questions!`,
+      ];
+      return responses[Math.floor(Math.random() * responses.length)];
+    }
+
+    // Resume / CV / Download
+    if (msg.match(/\b(resume|cv|download|pdf)\b/)) {
+      return `📄 **Download Ermiyas's Resume**\n\nYou can download his professional resume in PDF format!\n\n**Location:** Look for the download button in the Hero section at the top of the portfolio, or check the public folder for "Ermiya_Resume.pdf"\n\nThe resume includes:\n• Complete work history\n• Detailed project descriptions\n• Full skill set\n• Education and certifications\n• Contact information\n\nWould you like to know more about any specific section?`;
+    }
+
+    // Availability / Hire / Freelance
+    if (msg.match(/\b(available|hire|freelance|work|opportunity|job)\b/) && !msg.match(/\b(contact|email|reach)\b/)) {
+      return `💼 **Availability & Opportunities**\n\nErmiyas is currently:\n✅ Working as ${portfolioData.experience[0].role} at ${portfolioData.experience[0].company}\n✅ Studying ${portfolioData.education[1].degree} at ${portfolioData.education[1].institution}\n\n**Open to:**\n🔹 Freelance projects (AI/ML, Web Development)\n🔹 Part-time opportunities\n🔹 Consulting work\n🔹 Collaboration on innovative projects\n🔹 Full-time positions (upon graduation)\n\n**Specialties:**\n• AI/ML solutions\n• Full-stack web applications\n• Data analysis and visualization\n• Computer vision projects\n\nInterested in working together? Head to the Contact section to get in touch! 📧`;
+    }
+
+    // Hobbies / Personal life
+    if (msg.match(/\b(hobby|hobbies|free time|personal|fun|life|outside work)\b/)) {
+      return `🎯 **Beyond the Code**\n\nWhile I'm focused on Ermiyas's professional portfolio, here's what drives him:\n\n**Passions:**\n${portfolioData.interests.map(i => `🔹 ${i}`).join('\n')}\n\n**Professional Interests:**\n• Staying updated with latest AI/ML research\n• Contributing to open-source projects\n• Learning new technologies and frameworks\n• Building solutions that make a difference\n\n**Current Focus:**\n• Advancing his studies in Intelligent Data & AI Engineering\n• Building innovative AI-powered applications\n• Expanding his full-stack development expertise\n\nHis goal? To be at the forefront of AI innovation while making technology accessible and useful for everyone! 🚀`;
+    }
+
+    // Best project / Favorite project
+    if (msg.match(/\b(best|favorite|favourite|top|impressive|coolest)\b.*\b(project)\b/)) {
+      const topProject = portfolioData.projects[0];
+      return `🌟 **Standout Project**\n\n**${topProject.name}** is one of Ermiyas's most impressive projects!\n\n**What makes it special:**\n${topProject.description}\n\n**Technologies Used:**\n${topProject.technologies.join(' • ')}\n\n**Why it's impressive:**\n• Combines AI/ML with real-world application\n• Solves a practical problem in attendance tracking\n• Demonstrates full-stack capabilities\n• Uses cutting-edge computer vision technology\n\n**Other Notable Projects:**\n${portfolioData.projects.slice(1, 3).map(p => `🔹 ${p.name}`).join('\n')}\n\nWant to know more about any specific project? Just ask!`;
+    }
+
+    // GitHub / Code / Repository
+    if (msg.match(/\b(github|git|code|repository|repo|source)\b/)) {
+      return `💻 **GitHub & Code**\n\nErmiyas is active on GitHub with multiple projects!\n\n**What you'll find:**\n🔹 AI/ML projects with Python\n🔹 Full-stack web applications\n🔹 Data science notebooks\n🔹 Open-source contributions\n\n**Technologies in his repos:**\n• Python (AI/ML, Flask, OpenCV)\n• JavaScript/TypeScript (React)\n• Web development projects\n• Data analysis scripts\n\n**Check out his GitHub:**\nScroll down to the GitHub section on this portfolio to see:\n• Repository stats\n• Most used languages\n• Featured projects\n• Contribution activity\n\nWant to see a specific type of project? Let me know!`;
+    }
+
+    // Languages spoken (human languages)
+    if (msg.match(/\b(language|speak|fluent|tongue)\b/) && !msg.match(/\b(programming|code|tech)\b/)) {
+      return `🌍 **Languages**\n\nI focus on Ermiyas's technical (programming) expertise, but if you're asking about programming languages, he knows:\n\n${portfolioData.skills.programming.join(' • ')}\n\nFor other questions about his background, education, or technical skills, feel free to ask!`;
+    }
+
+    // Strengths / What makes him good
+    if (msg.match(/\b(strength|strong|good at|excel|standout|unique)\b/)) {
+      return `💪 **Key Strengths**\n\nWhat makes Ermiyas stand out:\n\n**Technical Excellence:**\n• Strong foundation in AI/ML and Data Science\n• Full-stack development capabilities\n• Practical problem-solving with real projects\n• Diverse tech stack: ${portfolioData.skills.programming.slice(0, 4).join(', ')}\n\n**Unique Combination:**\n✅ IT Support experience = Understanding real-world needs\n✅ AI/ML expertise = Building intelligent solutions  \n✅ Full-stack skills = End-to-end implementation\n✅ Continuous learning = Always improving\n\n**Proven Track Record:**\n• ${portfolioData.projects.length} completed projects\n• ${portfolioData.certifications.length} professional certifications\n• Current advanced studies in AI Engineering\n\n**Approach:**\nCombines theoretical knowledge with practical application to deliver solutions that actually work!`;
+    }
 
     // Tell me everything / Complete overview
     if (msg.match(/\b(everything|all|complete|full|entire|whole|overall|summary|overview)\b/)) {
@@ -139,6 +204,11 @@ const ChatBot = () => {
   const handleSendMessage = () => {
     if (!inputValue.trim()) return;
 
+    // Haptic feedback for mobile devices
+    if ('vibrate' in navigator) {
+      navigator.vibrate(10); // Short vibration
+    }
+
     // Add user message
     addUserMessage(inputValue);
     setInputValue('');
@@ -148,16 +218,32 @@ const ChatBot = () => {
     setTimeout(() => {
       const response = generateResponse(inputValue);
       addBotMessage(response);
+      
+      // Haptic feedback when response arrives
+      if ('vibrate' in navigator) {
+        navigator.vibrate([5, 10, 5]); // Pattern: pause-vibrate-pause-vibrate
+      }
     }, 1000 + Math.random() * 1000);
   };
 
   const handleSuggestedQuestion = (question: string) => {
+    // Haptic feedback
+    if ('vibrate' in navigator) {
+      navigator.vibrate(10);
+    }
+    
     addUserMessage(question);
     setIsTyping(true);
+    setShowSuggestions(false);
 
     setTimeout(() => {
       const response = generateResponse(question);
       addBotMessage(response);
+      
+      // Haptic feedback on response
+      if ('vibrate' in navigator) {
+        navigator.vibrate([5, 10, 5]);
+      }
     }, 1000);
   };
 
@@ -170,21 +256,49 @@ const ChatBot = () => {
     "How can I contact him?",
   ];
 
+  const dynamicSuggestions = messages.length > 2 ? [
+    "What's his best project?",
+    "Is he available for work?",
+    "Show me his GitHub",
+  ] : suggestedQuestions;
+
   return (
     <>
       {/* Floating Chat Button */}
       <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-2xl hover:shadow-blue-500/50 flex items-center justify-center text-white text-2xl group"
+        onClick={() => {
+          // Haptic feedback on button click
+          if ('vibrate' in navigator) {
+            navigator.vibrate(15);
+          }
+          setIsOpen(!isOpen);
+        }}
+        className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-2xl hover:shadow-blue-500/50 flex items-center justify-center text-white text-2xl group relative"
         whileHover={{ scale: 1.1, rotate: 5 }}
         whileTap={{ scale: 0.9 }}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.5 }}
+        title="Chat with ErmiAI (Alt + C)"
       >
+        {/* Pulse animation ring */}
+        <motion.div
+          className="absolute inset-0 rounded-full bg-blue-500"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.5, 0, 0.5],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
         <motion.span
           animate={{ rotate: isOpen ? 0 : 360 }}
           transition={{ duration: 0.3 }}
+          className="relative z-10"
         >
           {isOpen ? '✕' : '💬'}
         </motion.span>
@@ -237,7 +351,7 @@ const ChatBot = () => {
                       transition={{ delay: 0.2 }}
                     >
                       <p className="text-6xl mb-4">👋</p>
-                      <p className="text-lg font-semibold mb-2">Welcome to ErmiAI!</p>
+                      <p className="text-lg font-semibold mb-2">Welcome to ErmiaysAI!</p>
                       <p className="text-sm text-gray-400">
                         Your guide to learning about Ermiyas
                       </p>
@@ -315,13 +429,13 @@ const ChatBot = () => {
               </div>
 
               {/* Suggested Questions (show only at start) */}
-              {messages.length <= 1 && (
+              {showSuggestions && messages.length <= 1 && (
                 <div className="px-5 py-3 bg-gray-900/40 border-t border-white/10">
                   <p className="text-xs text-gray-400 mb-3 font-semibold">
                     💡 Try asking:
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {suggestedQuestions.slice(0, 3).map((question, idx) => (
+                    {dynamicSuggestions.slice(0, 3).map((question, idx) => (
                       <motion.button
                         key={idx}
                         onClick={() => handleSuggestedQuestion(question)}
@@ -358,7 +472,7 @@ const ChatBot = () => {
                   </motion.button>
                 </div>
                 <p className="text-xs text-gray-500 mt-2 text-center">
-                  Press Enter to send
+                  Press Enter to send • ESC to close • Alt+C to toggle
                 </p>
               </div>
             </div>

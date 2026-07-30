@@ -83,6 +83,17 @@ A **world-class, production-ready** personal portfolio website for an Intelligen
     - Social media
     - Copyright information
 
+12. **🤖 ErmiAI Assistant (NEW!)**
+    - Interactive AI chatbot powered by portfolio knowledge base
+    - Smart pattern matching for natural conversations
+    - "Tell me everything" comprehensive overview
+    - Keyboard shortcuts (ESC to close, Alt+C to toggle)
+    - Animated pulse effect for attention
+    - Dynamic suggested questions
+    - Beautiful glassmorphism design
+    - Typing indicators and timestamps
+    - Works completely offline (no API required)
+
 ## 🛠️ Tech Stack
 
 - **Framework**: React 18 with TypeScript
@@ -92,6 +103,7 @@ A **world-class, production-ready** personal portfolio website for an Intelligen
 - **Icons**: Lucide React
 - **Form Handling**: EmailJS
 - **Font**: Inter & Plus Jakarta Sans
+- **AI Chatbot**: Custom pattern-matching system with JSON knowledge base
 
 ## 📦 Installation
 
@@ -147,6 +159,7 @@ Edit these files:
 - `src/components/Experience.tsx` - Work history
 - `src/components/Projects.tsx` - Your projects
 - `src/components/Contact.tsx` - Contact details
+- `src/data/portfolioKnowledge.json` - **Chatbot knowledge base** (update all your info here for the AI assistant)
 
 #### Color Scheme
 Edit `tailwind.config.js` to customize colors:
@@ -185,7 +198,7 @@ netlify deploy --prod --dir=dist
 
 - Semantic HTML
 - ARIA labels
-- Keyboard navigation
+- Keyboard navigation (including chatbot shortcuts)
 - Screen reader friendly
 - Focus indicators
 - Color contrast compliance
@@ -197,6 +210,36 @@ netlify deploy --prod --dir=dist
 - 📦 Code splitting
 - 🖼️ Lazy loading ready
 - 📊 Lighthouse score optimized
+- 🤖 Chatbot works offline (no external API calls)
+
+## 💬 ErmiAI Chatbot Features
+
+### Smart Responses
+The chatbot can answer questions about:
+- **Skills & Technologies** - Programming languages, frameworks, tools
+- **Projects** - Detailed project information and tech stacks
+- **Education** - Degrees, universities, current studies
+- **Experience** - Work history and professional background
+- **Certifications** - Professional credentials
+- **Availability** - Freelance, job opportunities
+- **Resume/CV** - Download information
+- **GitHub** - Repository and code information
+
+### Keyboard Shortcuts
+- **Alt + C** - Toggle chat window
+- **ESC** - Close chat window
+- **Enter** - Send message
+
+### Conversation Examples
+Try asking:
+- "Tell me everything"
+- "What are his best skills?"
+- "Show me his best project"
+- "Is he available for work?"
+- "How can I download his resume?"
+
+### Customization
+Update the knowledge base in `src/data/portfolioKnowledge.json` to customize chatbot responses with your information.
 
 ## 📄 License
 
