@@ -8,9 +8,9 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'prompt',
-      includeAssets: ['favicon.jpg', 'icon-192.jpg', 'icon-512.jpg', 'Ermiya_Resume.pdf'],
+      includeAssets: ['favicon.jpg', 'icon-192.jpg', 'icon-512.jpg', 'Ermiyas_Resume.pdf'],
       manifest: {
-        name: 'Ermiya Zewdu - AI Engineer Portfolio',
+        name: 'Ermiyas Zewdu - AI Engineer Portfolio',
         short_name: 'Ermiya Portfolio',
         description: 'Professional portfolio of Ermiya Zewdu, AI Engineer and Machine Learning Developer',
         theme_color: '#0ea5e9',

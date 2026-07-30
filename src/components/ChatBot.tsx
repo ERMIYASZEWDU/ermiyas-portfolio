@@ -91,7 +91,7 @@ const ChatBot = () => {
 
     // Resume / CV / Download
     if (msg.match(/\b(resume|cv|download|pdf)\b/)) {
-      return `📄 **Download Ermiyas's Resume**\n\nYou can download his professional resume in PDF format!\n\n**Location:** Look for the download button in the Hero section at the top of the portfolio, or check the public folder for "Ermiya_Resume.pdf"\n\nThe resume includes:\n• Complete work history\n• Detailed project descriptions\n• Full skill set\n• Education and certifications\n• Contact information\n\nWould you like to know more about any specific section?`;
+      return `📄 **Download Ermiyas's Resume**\n\nYou can download his professional resume in PDF format!\n\n**Location:** Look for the download button in the Hero section at the top of the portfolio, or check the public folder for "Ermiyas_Resume.pdf"\n\nThe resume includes:\n• Complete work history\n• Detailed project descriptions\n• Full skill set\n• Education and certifications\n• Contact information\n\nWould you like to know more about any specific section?`;
     }
 
     // Availability / Hire / Freelance
@@ -351,7 +351,7 @@ const ChatBot = () => {
                       transition={{ delay: 0.2 }}
                     >
                       <p className="text-6xl mb-4">👋</p>
-                      <p className="text-lg font-semibold mb-2">Welcome to ErmiaysAI!</p>
+                      <p className="text-lg font-semibold mb-2">Welcome to Ermiays_AI!</p>
                       <p className="text-sm text-gray-400">
                         Your guide to learning about Ermiyas
                       </p>
