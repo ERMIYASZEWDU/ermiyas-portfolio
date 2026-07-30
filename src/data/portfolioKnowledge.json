@@ -2,7 +2,7 @@
   "personal": {
     "name": "Ermiyas Zewdu Assefa",
     "role": "Computer Science Graduate | Intelligent Data & AI Engineering Student",
-    "bio": "I am a passionate Computer Science graduate from Ambo University, currently pursuing Intelligent Data & AI Engineering at Addis Ababa University through the Qiyas Program. I work as an IT Support Specialist at Tewos Technology Solutions and have a strong interest in Artificial Intelligence, Machine Learning, Data Science, and Full Stack Development."
+    "bio": "I am a passionate Computer Science graduate from Ambo University, currently pursuing Intelligent Data & AI Engineering at Addis Ababa University through the Qiyas Program. I work as an IT Support Specialist and build AI and web projects focused on practical solutions."
   },
   "education": [
     {
@@ -82,6 +82,12 @@
     "Full Stack Development"
   ],
   "contact": {
-    "message": "Feel free to reach out through the contact section on this portfolio!"
+    "message": "Feel free to reach out through the contact section on this portfolio!",
+    "email": "ermiyaszewdu266@gmail.com"
+  },
+  "links": {
+    "github": "https://github.com/ERMIYASZEWDU",
+    "linkedin": "https://www.linkedin.com/in/ermiyas2",
+    "portfolio": "https://ermiyas-portfolio-ten.vercel.app/"
   }
 }
