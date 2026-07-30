@@ -1,0 +1,57 @@
+[
+  {
+    "id": "personal",
+    "text": "Ermiyas Zewdu Assefa — Computer Science Graduate | Intelligent Data & AI Engineering Student. I am a passionate Computer Science graduate from Ambo University, currently pursuing Intelligent Data & AI Engineering at Addis Ababa University through the Qiyas Program. I work as an IT Support Specialist and build AI and web projects focused on practical solutions.",
+    "metadata": { "section": "About", "url": "#about", "title": "About" }
+  },
+  {
+    "id": "education",
+    "text": "BSc in Computer Science — Ambo University (Completed)\nIntelligent Data & AI Engineering — Addis Ababa University (Qiyas Program) (Current)",
+    "metadata": { "section": "Education", "url": "#education", "title": "Education" }
+  },
+  {
+    "id": "experience",
+    "text": "IT Support Specialist at Tewos Technology Solutions — Current",
+    "metadata": { "section": "Experience", "url": "#experience", "title": "Experience" }
+  },
+  {
+    "id": "skills",
+    "text": "Programming: Python, Java, JavaScript, PHP. Frontend: React, HTML, CSS. Backend: Flask, SQL. Data Science: Machine Learning, Data Analysis, Pandas, NumPy, Scikit-learn, OpenCV. Tools: Git, GitHub.",
+    "metadata": { "section": "Skills", "url": "#skills", "title": "Skills" }
+  },
+  {
+    "id": "project_0",
+    "text": "Face Recognition Attendance System — A comprehensive attendance tracking system using facial recognition technology. Technologies: Python, OpenCV, Flask, Firebase. Category: AI/ML.",
+    "metadata": { "section": "Projects", "url": "#projects", "title": "Face Recognition Attendance System", "project": "Face Recognition Attendance System" }
+  },
+  {
+    "id": "project_1",
+    "text": "Web-based Attendance Management System — Modern web application for managing and tracking attendance. Technologies: Web Development. Category: Web Application.",
+    "metadata": { "section": "Projects", "url": "#projects", "title": "Web-based Attendance Management System", "project": "Web-based Attendance Management System" }
+  },
+  {
+    "id": "project_2",
+    "text": "Online Voting System — Secure digital voting platform with authentication. Technologies: Web Development. Category: Web Application.",
+    "metadata": { "section": "Projects", "url": "#projects", "title": "Online Voting System", "project": "Online Voting System" }
+  },
+  {
+    "id": "project_3",
+    "text": "School Management System with AI Timetable Generation — Intelligent school management platform with automated timetable scheduling using AI algorithms. Technologies: AI, Web Development. Category: AI/Web Application.",
+    "metadata": { "section": "Projects", "url": "#projects", "title": "School Management System with AI Timetable Generation", "project": "School Management System with AI Timetable Generation" }
+  },
+  {
+    "id": "certifications",
+    "text": "Programming Fundamentals (Udacity). Web Development (Udacity). Data Analysis (Udacity). Android Development (Udacity).",
+    "metadata": { "section": "Certifications", "url": "#certifications", "title": "Certifications" }
+  },
+  {
+    "id": "interests",
+    "text": "Interests: Artificial Intelligence, Machine Learning, Data Science, Full Stack Development.",
+    "metadata": { "section": "Interests", "url": "#about", "title": "Interests" }
+  },
+  {
+    "id": "contact",
+    "text": "Feel free to reach out through the contact section on this portfolio! Email: ermiyaszewdu266@gmail.com. Links: GitHub: https://github.com/ERMIYASZEWDU; LinkedIn: https://www.linkedin.com/in/ermiyas2; Portfolio: https://ermiyas-portfolio-ten.vercel.app/.",
+    "metadata": { "section": "Contact", "url": "#contact", "title": "Contact" }
+  }
+]
