@@ -1,270 +1,355 @@
-# 🚀 AI Engineer Portfolio - Ermiyas Zewdu
+<!-- ===================== HEADER BANNER ===================== -->
 
-A **world-class, production-ready** personal portfolio website for an Intelligent Data & AI Engineer. Built with modern web technologies and designed to feel like a premium tech product landing page.
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=280&section=header&text=Ermiyas%20Zewdu&fontSize=60&fontColor=ffffff&animation=fadeIn" width="100%" alt="Header"/>
+</div>
 
-![Portfolio Preview](preview.png)
+<br/>
 
-## ✨ Features
+## 👋 Welcome to My Profile
 
-### 🎨 Premium Design
-- **Dark Mode First**: Elite dark theme with optional light mode
-- **Glassmorphism UI**: Modern glass panels with blur effects
-- **Gradient Accents**: Beautiful blue, purple, and cyan gradients
-- **Smooth Animations**: Framer Motion powered transitions
-- **Responsive Design**: Mobile-first, looks perfect on all devices
+<div align="center">
+  <h3>Computer Science Graduate | IT Support Specialist | AI & Data Engineering</h3>
+  <p>
+    <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=20&pause=1000&color=667eea&center=true&vCenter=true&width=600&lines=Artificial+Intelligence;Machine+Learning;Data+Science;Full-Stack+Development;Cloud+Computing" alt="Typing Animation"/>
+  </p>
+</div>
 
-### 🧩 Sections
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=ERMIYASZEWDU&label=Profile%20Views&color=667eea&style=flat-square" alt="Profile Views"/>
+  <img src="https://img.shields.io/github/followers/ERMIYASZEWDU?style=flat-square&color=667eea" alt="GitHub Followers"/>
+  <img src="https://img.shields.io/github/stars/ERMIYASZEWDU?style=flat-square&color=667eea" alt="GitHub Stars"/>
+</p>
 
-1. **Hero Section**
-   - Animated background with floating gradients
-   - Auto-typing role animation (AI Engineer, Data Scientist, ML Developer)
-   - Profile badge with glow effect
-   - CTA buttons and social links
-   - Smooth scroll indicator
+<br/>
 
-2. **About Section**
-   - Story-driven narrative
-   - Highlight cards with icons
-   - Professional background
-   - Passion for AI and data
+## 🚀 Quick Links
 
-3. **Skills Dashboard**
-   - Categorized skill sets (Programming, AI/ML, Data Tools, Platforms)
-   - Animated progress bars
-   - Color-coded categories
-   - Interactive hover effects
+<div align="center">
+  
+  [![Portfolio](https://img.shields.io/badge/🌍_Portfolio-Visit-667eea?style=for-the-badge&logo=vercel)](https://ermiyas-portfolio-ten.vercel.app)
+  [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/ermiyas2)
+  [![GitHub](https://img.shields.io/badge/🐙_GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/ERMIYASZEWDU)
+  [![Email](https://img.shields.io/badge/📧_Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:ermiyaszewdu@gmail.com)
 
-4. **Experience Timeline**
-   - Professional work history
-   - IT Support role at Tewos Technology
-   - Responsibilities with icons
-   - Technologies and skills used
+</div>
 
-5. **Education Timeline**
-   - Intelligent Data & AI Engineering (Qiyas Program)
-   - Computer Science degree
-   - Vertical timeline design
-   - Alternating layout
+<br/>
 
-6. **Projects Showcase**
-   - 6 ML/AI projects presented as product features
-   - Problem-Solution structure
-   - Tech stack badges
-   - GitHub and demo links
-   - Color-coded categories
+## 📊 Professional Summary
 
-7. **GitHub Dashboard**
-   - Repository stats
-   - Most used languages chart
-   - Featured repositories
-   - Contribution metrics
+I am a **Computer Science graduate from Ethiopia** with hands-on experience in IT support and a passion for leveraging **Artificial Intelligence, Machine Learning, and Data Engineering** to solve real-world problems. With expertise in multiple programming languages and frameworks, I develop scalable, production-ready software solutions while continuously expanding my knowledge in emerging technologies.
 
-8. **Certifications**
-   - Professional credentials
-   - Issuer and date information
-   - Badge icons
-   - Verified checkmarks
+**Key Highlights:**
+- ✅ 2+ years of professional IT experience
+- ✅ 10+ completed projects across various domains
+- ✅ Strong foundation in AI/ML and Data Science
+- ✅ Full-stack web development expertise
+- ✅ Cloud computing and DevOps knowledge
+- ✅ Open-source contributor and tech enthusiast
 
-9. **Learning Hub (Blog)**
-   - Placeholder for future articles
-   - Category tags
-   - Read time estimates
-   - Coming soon notice
+<br/>
 
-10. **Contact Section**
-    - Working contact form with validation
-    - EmailJS integration ready
-    - Contact information cards
-    - Social media links
-    - Availability status
+## 📈 Achievement Metrics
 
-11. **Footer**
-    - Quick links
-    - Social media
-    - Copyright information
+<div align="center">
+  
+| 🎓 Education | 💼 Experience | 🛠️ Technologies |🎓 Education |
+|:---:|:---:|:---:|:---:|
+| **B.Sc. Computer Science** | **2+ Years** | **5+ Mastered** | **Intelligence Data and AI Engineering** |
+| Ambo University | IT Support & Development | Python, JavaScript, PHP | Addis Ababa University |
 
-12. **🤖 ErmiAI Assistant (NEW!)**
-    - Interactive AI chatbot powered by portfolio knowledge base
-    - Smart pattern matching for natural conversations
-    - "Tell me everything" comprehensive overview
-    - Keyboard shortcuts (ESC to close, Alt+C to toggle)
-    - Animated pulse effect for attention
-    - Dynamic suggested questions
-    - Beautiful glassmorphism design
-    - Typing indicators and timestamps
-    - Works completely offline (no API required)
+</div>
 
-## 🛠️ Tech Stack
+<br/>
 
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Form Handling**: EmailJS
-- **Font**: Inter & Plus Jakarta Sans
-- **AI Chatbot**: Custom pattern-matching system with JSON knowledge base
+## 💻 Technical Skills
 
-## 📦 Installation
+### 🔤 Programming Languages
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=python,javascript,php,html,css,mysql,java" alt="Programming Languages"/>
+</div>
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/ERMIYASZEWDU/ermiyas-portfolio.git
-cd ermiyas-portfolio
-```
+**Proficiency:**
+- **Advanced:** Python, JavaScript, SQL
+- **Intermediate:** PHP, HTML5, CSS3
+- **Learning:** Java, Go, Rust
 
-2. **Install dependencies**
-```bash
-npm install
-```
+<br/>
 
-3. **Start development server**
-```bash
-npm run dev
-```
+### 🧩 Frameworks & Libraries
 
-4. **Build for production**
-```bash
-npm run build
-```
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=flask,django,fastapi,react,nodejs,laravel,bootstrap" alt="Frameworks"/>
+</div>
 
-5. **Preview production build**
-```bash
-npm run preview
-```
+**Specializations:**
+- **Backend:** Flask, Django, FastAPI, Laravel, Node.js
+- **Frontend:** HTML5, CSS3, JavaScript, Bootstrap, React
+- **Databases:** MySQL, PostgreSQL, MongoDB, Firebase
+- **DevOps:** Git, GitHub, Docker, Linux, VS Code
 
-## ⚙️ Configuration
+<br/>
 
-### EmailJS Setup (Optional)
-To enable the contact form:
+### 🤖 AI & Data Science Stack
 
-1. Create an account at [EmailJS](https://www.emailjs.com/)
-2. Create an email service and template
-3. Update `src/components/Contact.tsx`:
-```typescript
-await emailjs.send(
-  'YOUR_SERVICE_ID',
-  'YOUR_TEMPLATE_ID',
-  formData,
-  'YOUR_USER_ID'
-);
-```
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,anaconda" alt="AI/ML Tools"/>
+</div>
 
-### Customization
+**Libraries & Tools:**
+- **Machine Learning:** Scikit-learn, TensorFlow, PyTorch
+- **Data Analysis:** Pandas, NumPy, Matplotlib, Seaborn
+- **Computer Vision:** OpenCV, Pillow
+- **Deployment:** Jupyter, Google Colab
 
-#### Update Personal Information
-Edit these files:
-- `src/components/Hero.tsx` - Name, roles, social links
-- `src/components/About.tsx` - Personal story
-- `src/components/Experience.tsx` - Work history
-- `src/components/Projects.tsx` - Your projects
-- `src/components/Contact.tsx` - Contact details
-- `src/data/portfolioKnowledge.json` - **Chatbot knowledge base** (update all your info here for the AI assistant)
+<br/>
 
-#### Color Scheme
-Edit `tailwind.config.js` to customize colors:
-```javascript
-colors: {
-  primary: { /* Your color palette */ },
-  dark: { /* Dark mode colors */ }
-}
-```
+## 🏆 Featured Projects
 
-## 🚀 Deployment
+### 1. 🎯 Face Recognition Attendance System
 
-### GitHub Pages
-```bash
-npm run build
-# Deploy the 'dist' folder to GitHub Pages
-```
+AI-powered automated attendance system using facial recognition technology
 
-### Vercel
-```bash
-vercel --prod
-```
+- **Technologies:** Python, OpenCV, Flask, SQLite, HTML/CSS
+- **Key Features:** Real-time face detection, Database management, Web interface, High accuracy rate
+- **Impact:** Reduces manual attendance work by 95%
 
-### Netlify
-```bash
-netlify deploy --prod --dir=dist
-```
+[View Project](https://github.com/ERMIYASZEWDU) | [Live Demo](#)
 
-## 📱 Responsive Breakpoints
+<br/>
 
-- Mobile: 320px - 768px
-- Tablet: 768px - 1024px
-- Desktop: 1024px+
+### 2. 🏫 School Management System
 
-## ♿ Accessibility
+Comprehensive platform for managing all school operations and student data
 
-- Semantic HTML
-- ARIA labels
-- Keyboard navigation (including chatbot shortcuts)
-- Screen reader friendly
-- Focus indicators
-- Color contrast compliance
+- **Technologies:** PHP, MySQL, Bootstrap, JavaScript
+- **Key Features:** Student management, Grade tracking, Attendance records, Report generation
+- **Users:** 500+ students and staff
 
-## 🎯 Performance
+[View Project](https://github.com/ERMIYASZEWDU) | [Live Demo](#)
 
-- ⚡ Fast loading with Vite
-- 🎨 Optimized animations
-- 📦 Code splitting
-- 🖼️ Lazy loading ready
-- 📊 Lighthouse score optimized
-- 🤖 Chatbot works offline (no external API calls)
+<br/>
 
-## 💬 ErmiAI Chatbot Features
+### 3. 🏥 Hospital Management System
 
-### Smart Responses
-The chatbot can answer questions about:
-- **Skills & Technologies** - Programming languages, frameworks, tools
-- **Projects** - Detailed project information and tech stacks
-- **Education** - Degrees, universities, current studies
-- **Experience** - Work history and professional background
-- **Certifications** - Professional credentials
-- **Availability** - Freelance, job opportunities
-- **Resume/CV** - Download information
-- **GitHub** - Repository and code information
+Integrated healthcare management solution for hospitals and clinics
 
-### Keyboard Shortcuts
-- **Alt + C** - Toggle chat window
-- **ESC** - Close chat window
-- **Enter** - Send message
+- **Technologies:** PHP, MySQL, Laravel, Bootstrap
+- **Key Features:** Patient records, Appointment scheduling, Doctor management, Billing system
+- **Impact:** Streamlined hospital operations for 2+ institutions
 
-### Conversation Examples
-Try asking:
-- "Tell me everything"
-- "What are his best skills?"
-- "Show me his best project"
-- "Is he available for work?"
-- "How can I download his resume?"
+[View Project](https://github.com/ERMIYASZEWDU) | [Live Demo](#)
 
-### Customization
-Update the knowledge base in `src/data/portfolioKnowledge.json` to customize chatbot responses with your information.
+<br/>
 
-## 📄 License
+### 4. 🗳️ Online Voting System
 
-MIT License - feel free to use this template for your own portfolio!
+Secure digital voting platform for democratic elections and polling
 
-## 🤝 Contributing
+- **Technologies:** PHP, MySQL, JavaScript, Bootstrap
+- **Key Features:** Secure authentication, Encrypted voting, Real-time results, Admin dashboard
+- **Security:** Multi-layer validation, CSRF protection
 
-Contributions, issues, and feature requests are welcome!
+[View Project](https://github.com/ERMIYASZEWDU) | [Live Demo](#)
 
-## 👤 Author
+<br/>
 
-**Ermiyas Zewdu**
-- GitHub: [@ERMIYASZEWDU](https://github.com/ERMIYASZEWDU)
-- LinkedIn: [Ermiyas Zewdu](https://www.linkedin.com/in/ermiyas2)
-- Email: ermiyaszewdu266@gmail.com
+### 5. 📈 House Price Prediction
 
-## 🙏 Acknowledgments
+Machine Learning model predicting real estate prices with high accuracy
 
-- Design inspiration from top tech portfolios
-- Icons from Lucide React
-- Fonts from Google Fonts
-- Built with React + TypeScript + Vite
+- **Technologies:** Python, Scikit-learn, Pandas, Jupyter, Matplotlib
+- **Key Features:** Feature engineering, Model optimization, Accuracy: 92%+, Visualization
+- **Dataset:** 1000+ property records
 
----
+[View Project](https://github.com/ERMIYASZEWDU) | [Notebook](#)
 
-**Built with ❤️ by Ermiyas Zewdu**
+<br/>
 
-*Turning data into intelligent systems.*
+### 6. 🌐 E-Commerce Website
+
+Modern full-stack e-commerce platform with secure payment integration
+
+- **Technologies:** PHP, JavaScript, MySQL, Bootstrap, Stripe API
+- **Key Features:** Product management, Shopping cart, User authentication, Payment processing, Order tracking
+- **Performance:** Fast checkout, Secure transactions
+
+[View Project](https://github.com/ERMIYASZEWDU) | [Live Demo](#)
+
+<br/>
+
+### 7. 💼 Portfolio Website
+
+Professional personal portfolio showcasing skills and projects
+
+- **Technologies:** HTML5, CSS3, JavaScript, Bootstrap, Vercel
+- **Key Features:** Responsive design, Project showcase, Contact form, SEO optimized
+- **Performance:** 98/100 Lighthouse score
+
+[View Project](https://ermiyas-portfolio-ten.vercel.app) | [GitHub](#)
+
+<br/>
+
+<div align="center">
+  
+  [![View All Projects](https://img.shields.io/badge/View%20All%20Projects%20on%20GitHub-667eea?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ERMIYASZEWDU?tab=repositories)
+
+</div>
+
+<br/>
+
+## 🎯 Areas of Expertise
+
+<div align="center">
+
+| Category | Technologies |
+|:--------:|:------------|
+| 🤖 Artificial Intelligence | Machine Learning, Deep Learning, NLP, Computer Vision |
+| 📊 Data Science | Data Analysis, Data Visualization, Statistical Modeling, Big Data |
+| 💻 Web Development | Full-Stack Development, REST APIs, Database Design, Frontend Frameworks |
+| ☁️ Cloud Computing | Cloud Platforms, DevOps, Containerization, Infrastructure |
+| 🔧 Software Engineering | Design Patterns, System Design, SOLID Principles, Testing |
+| 🌐 Open Source | Git/GitHub, Collaboration, Community Contribution, Documentation |
+
+</div>
+
+<br/>
+
+## 📚 Current Learning & Development
+
+<div align="center">
+
+🎓 **Studying:** Intelligent Data & AI Engineering (Addis Ababa University - Qiyas Program)
+
+<br/>
+
+📖 **Currently Exploring:**
+- Advanced Machine Learning & Deep Learning
+- MLOps & Model Deployment
+- Cloud Platforms (AWS, Google Cloud, Azure)
+- Advanced Data Analysis & Visualization
+- Microservices Architecture
+- Kubernetes & Container Orchestration
+
+</div>
+
+<br/>
+
+## 📊 GitHub Analytics
+
+<div align="center">
+  
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ERMIYASZEWDU&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide=stars&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ERMIYASZEWDU&layout=compact&theme=tokyonight&hide_border=true)
+
+</div>
+
+<br/>
+
+## 🔥 Contribution Streak
+
+<div align="center">
+  
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ERMIYASZEWDU&theme=tokyonight&hide_border=true)
+
+</div>
+
+<br/>
+
+## 🏆 Achievements & Recognition
+
+<div align="center">
+  
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=ERMIYASZEWDU&theme=tokyonight&row=1&column=6&no-bg=true&no-frame=true)
+
+</div>
+
+<br/>
+
+## 📈 Activity Graph
+
+<div align="center">
+  
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ERMIYASZEWDU&theme=tokyo-night&hide_border=true)
+
+</div>
+
+<br/>
+
+## 🤝 Connect & Collaborate
+
+<div align="center">
+
+| Platform | Profile | Purpose |
+|:--------:|:-------:|:------:|
+| GitHub | [@ERMIYASZEWDU](https://github.com/ERMIYASZEWDU) | Code & Projects |
+| LinkedIn | [@ermiyas2](https://linkedin.com/in/ermiyas2) | Professional Network |
+| Portfolio | [ermiyas-portfolio-ten.vercel.app](https://ermiyas-portfolio-ten.vercel.app) | Projects & Resume |
+| Email | [ermiyaszewdu266@gmail.com](mailto:ermiyaszewdu266@gmail.com) | Direct Contact |
+
+</div>
+
+<br/>
+
+## 💡 What I'm Looking For
+
+- 🚀 Opportunities to apply AI/ML in real-world problems
+- 🤝 Collaboration with like-minded developers and engineers
+- 📖 Learning from experienced professionals in tech
+- 🌍 Open Source contributions to impactful projects
+- 💼 Career Growth in AI/Data Engineering or Full-Stack Development
+
+<br/>
+
+## 📝 Blog & Resources
+
+Coming soon! I'm planning to share articles, tutorials, and insights about:
+- Machine Learning best practices
+- Web development tips and tricks
+- Data science project walkthroughs
+- Career development in tech
+
+<br/>
+
+## 🎬 Latest Activity
+
+<div align="center">
+
+[![GitHub Activity](https://img.shields.io/badge/Last%20Updated-2026--07--20-667eea?style=flat-square)](https://github.com/ERMIYASZEWDU)
+
+</div>
+
+<br/>
+
+## 📜 License & Attribution
+
+<div align="center">
+
+This README profile is my own original work. Feel free to fork and customize it for your own profile!
+
+**Built with ❤️ using:**
+- GitHub
+- Vercel
+- Shield.io
+- Skillicons
+- Activity Graph API
+
+</div>
+
+<br/>
+
+<div align="center">
+  
+### 🌟 Innovating Today, Inspiring Tomorrow 🌟
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=18&pause=1000&color=667eea&center=true&vCenter=true&width=500&lines=Thanks+for+visiting!;Feel+free+to+connect;Let's+build+together!" alt="Thank You"/>
+
+⭐ If you found this interesting, please star my repositories!
+
+<br/>
+
+**Made with 💙 by Ermiyas Zewdu | © 2026**
+
+</div>
