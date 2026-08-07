@@ -1,3 +1,4 @@
+// ErmiAI Chatbot v2.0 - Production Ready
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import portfolioData from '../data/portfolioKnowledge.json';
