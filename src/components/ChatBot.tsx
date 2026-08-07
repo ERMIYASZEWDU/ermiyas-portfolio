@@ -423,7 +423,7 @@ const ChatBot = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <span className="text-xl">➤</span>
+                        <span className="text-lg">➤</span>
                       </motion.button>
                     </div>
                     <p className="text-xs text-gray-500 mt-2 text-center">
@@ -450,7 +450,7 @@ const ChatBot = () => {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.5 }}
-            title="Chat with ErmiAI (Alt + C)"
+            title="Chat with ErmiAI - Ask about Ermiyas's portfolio (Alt + C)"
           >
             {/* Pulse animation ring */}
             <motion.div
