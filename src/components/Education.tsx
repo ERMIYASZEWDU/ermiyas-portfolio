@@ -13,7 +13,7 @@ const Education = () => {
       level: 'Advanced Studies',
       institution: 'Addis Ababa University',
       program: 'Qiyas Program',
-      period: '2025 - 2026',
+      period: '2026',
       description: 'Specialized program focusing on advanced AI, Machine Learning, Data Engineering, and Intelligent Systems.',
       icon: <Award className="w-8 h-8" />,
       color: 'from-purple-600 to-pink-600',

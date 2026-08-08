@@ -143,7 +143,7 @@ export function extractPortfolioKnowledge(): PortfolioKnowledge {
         level: "Advanced Studies",
         institution: "Addis Ababa University",
         program: "Qiyas Program",
-        period: "2025 - 2026",
+        period: "2026",
         description: "Specialized program focusing on advanced AI, Machine Learning, Data Engineering, and Intelligent Systems.",
         status: "Current"
       },
