@@ -1,7 +1,7 @@
-// ErmiAI Chatbot v2.0 - Production Ready
+// ErmiAI Chatbot v3.0 - Now Reading REAL Portfolio Data
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import portfolioData from '../data/portfolioKnowledge.json';
+import { portfolioData } from '../data/portfolioData';
 
 interface Message {
   id: string;
@@ -108,7 +108,7 @@ const ChatBot = () => {
     // Best project / Favorite project
     if (msg.match(/\b(best|favorite|favourite|top|impressive|coolest)\b.*\b(project)\b/)) {
       const topProject = portfolioData.projects[0];
-      return `🌟 **Standout Project**\n\n**${topProject.name}** is one of Ermiyas's most impressive projects!\n\n**What makes it special:**\n${topProject.description}`;
+      return `🌟 **Standout Project**\n\n**${topProject.title}** is one of Ermiyas's most impressive projects!\n\n**Problem:** ${topProject.problem}\n\n**Solution:** ${topProject.solution}\n\n**Tech Stack:** ${topProject.tech.join(', ')}\n\n**GitHub:** ${topProject.github}`;
     }
 
     // GitHub / Code / Repository
@@ -128,7 +128,7 @@ const ChatBot = () => {
 
     // Tell me everything / Complete overview
     if (msg.match(/\b(everything|all|complete|full|entire|whole|overall|summary|overview)\b/)) {
-      return `📋 **Complete Portfolio Overview - Ermiyas Zewdu Assefa**\n\n👨‍💻 **ABOUT:**\n${portfolioData.personal.bio}`;
+      return `📋 **Complete Portfolio Overview - Ermiyas Zewdu Assefa**\n\n👨‍💻 **ABOUT:**\n${portfolioData.personal.bio}\n\n🎓 **EDUCATION:**\n• ${portfolioData.education[0].degree} (${portfolioData.education[0].status}) - ${portfolioData.education[0].institution}\n• ${portfolioData.education[1].degree} (${portfolioData.education[1].status})\n\n💼 **EXPERIENCE:**\n• ${portfolioData.experience[0].role} at ${portfolioData.experience[0].company}\n\n🚀 **PROJECTS:** ${portfolioData.projects.length} ML/AI Projects\n\n💻 **TOP SKILLS:** ${portfolioData.skills["Programming Languages"].join(', ')}\n\n📜 **CERTIFICATIONS:** ${portfolioData.certifications.length} from Udacity & Udemy`;
     }
 
     // Greetings
@@ -143,7 +143,12 @@ const ChatBot = () => {
 
     // Skills
     if (msg.match(/\b(skill|technology|tech stack|technologies|programming|languages|what does he know)\b/)) {
-      return `💻 **Technical Skills & Expertise**\n\nErmiyas has a comprehensive skill set across multiple domains.`;
+      const skillsList = Object.entries(portfolioData.skills)
+        .map(([category, items]) => 
+          `**${category}:**\n${(items as string[]).map(skill => `  • ${skill}`).join('\n')}`
+        )
+        .join('\n\n');
+      return `💻 **Technical Skills & Expertise**\n\nErmiyas has a comprehensive skill set across multiple domains:\n\n${skillsList}`;
     }
 
     // Projects
@@ -151,28 +156,33 @@ const ChatBot = () => {
       const projectsList = portfolioData.projects
         .map(
           (project, idx) =>
-            `**${idx + 1}. ${project.name}**\n${project.description}\n💡 Tech: ${project.technologies.join(', ')}`
+            `**${idx + 1}. ${project.title}**\n📋 ${project.solution}\n💡 Tech: ${project.tech.join(', ')}\n🔗 ${project.github}`
         )
         .join('\n\n');
-      return `🚀 **Featured Projects**\n\nHere are some of Ermiyas's impressive projects:\n\n${projectsList}`;
+      return `🚀 **Featured Projects** (${portfolioData.projects.length} ML/AI Projects)\n\n${projectsList}\n\n✨ All projects are on GitHub!`;
     }
 
     // Education
     if (msg.match(/\b(education|study|degree|university|college|school)\b/)) {
-      return `🎓 **Educational Background**\n\n**Completed:**\n${portfolioData.education[0].degree}`;
+      const eduList = portfolioData.education
+        .map(edu => `**${edu.degree}** (${edu.status})\n📍 ${edu.institution} | ${edu.program}\n📅 ${edu.period}\n${edu.description}`)
+        .join('\n\n');
+      return `🎓 **Educational Background**\n\n${eduList}`;
     }
 
     // Experience
     if (msg.match(/\b(experience|work|job|position|role|employment)\b/)) {
-      return `💼 **Professional Experience**\n\n**Current Role:**\n${portfolioData.experience[0].role} at ${portfolioData.experience[0].company}`;
+      const exp = portfolioData.experience[0];
+      const responsibilities = exp.responsibilities.map(r => `  • ${r}`).join('\n');
+      return `💼 **Professional Experience**\n\n**${exp.role}** at ${exp.company}\n📅 ${exp.period}\n\n${exp.description}\n\n**Key Responsibilities:**\n${responsibilities}\n\n**Technologies:** ${exp.technologies.join(', ')}`;
     }
 
     // Certifications
     if (msg.match(/\b(certification|certificate|course|training|certified)\b/)) {
       const certsList = portfolioData.certifications
-        .map((cert) => `✓ ${cert.name} - ${cert.provider}`)
+        .map((cert) => `✓ **${cert.title}** - ${cert.issuer} (${cert.date})`)
         .join('\n');
-      return `📜 **Professional Certifications**\n\nErmiyas has completed multiple certifications:\n\n${certsList}`;
+      return `📜 **Professional Certifications**\n\nErmiyas has completed ${portfolioData.certifications.length} certifications:\n\n${certsList}\n\nCommitted to continuous learning and staying current with AI/ML developments!`;
     }
 
     // Interests
@@ -188,9 +198,10 @@ const ChatBot = () => {
     // AI / Machine Learning specific
     if (msg.match(/\b(ai|artificial intelligence|machine learning|ml|deep learning)\b/)) {
       const aiProjects = portfolioData.projects.filter((p) =>
-        p.category.includes('AI')
+        p.category.toLowerCase().includes('machine learning') || p.category.toLowerCase().includes('ai') || p.category.toLowerCase().includes('nlp')
       );
-      return `🤖 **AI & Machine Learning Expertise**\n\nErmiyas has a strong foundation in AI & ML.`;
+      const projectList = aiProjects.map(p => `• **${p.title}**: ${p.solution.substring(0, 80)}...`).join('\n');
+      return `🤖 **AI & Machine Learning Expertise**\n\nErmiyas specializes in building intelligent systems with ${aiProjects.length}+ ML/AI projects:\n\n${projectList}\n\n**ML Skills:** ${portfolioData.skills["AI & Machine Learning"].join(', ')}\n\nCurrently studying Intelligent Data & AI Engineering at Addis Ababa University!`;
     }
 
     // Web Development specific
