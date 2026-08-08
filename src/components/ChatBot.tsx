@@ -42,12 +42,12 @@ const ChatBot = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
 
-  // Welcome message
+  // Welcome message - ONLY shown once when chat opens
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       setTimeout(() => {
         addBotMessage(
-          `👋 Hi! I'm **ErmiAI**, your guide to ${knowledge.personal.name}'s portfolio.\n\nI can answer questions about:\n• ${knowledge.projects.length} ML/AI projects\n• ${knowledge.skills.allSkills.length}+ technical skills\n• Education & ${knowledge.certifications.length} certifications\n• Professional experience\n• Contact info\n\nAsk me anything!`
+          `👋 Hi! I'm Ermiyas's Portfolio Assistant. Ask me about his skills, projects, experience, or education.`
         );
       }, 500);
     }
@@ -104,17 +104,17 @@ const ChatBot = () => {
   };
 
   const suggestedQuestions = [
-    "Tell me about Ermiyas",
-    "What are his skills?",
-    "Show me his projects",
-    "What's his experience?",
-    "How can I contact him?",
-    "What certifications does he have?",
+    "About Me",
+    "Skills",
+    "Projects",
+    "Experience",
+    "Education",
+    "Contact",
   ];
 
   return (
     <>
-      <div id="chatbot-root" className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 pointer-events-none">
+      <div id="chatbot-root" className="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 z-40 pointer-events-none">
         <div className="flex flex-col items-end pointer-events-auto">
           
           {/* Chat Window */}
@@ -125,37 +125,37 @@ const ChatBot = () => {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-                className="mb-3 w-[90vw] max-w-[420px] sm:w-[360px] h-[65vh] sm:h-[650px] max-h-[calc(100vh-96px)]"
+                className="mb-2 sm:mb-3 w-[calc(100vw-16px)] max-w-[400px] sm:max-w-[380px] md:max-w-[420px] h-[calc(100dvh-80px)] sm:h-[min(600px,calc(100dvh-100px))] md:h-[min(650px,calc(100dvh-120px))]"
               >
                 <div className="relative w-full h-full bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 overflow-hidden flex flex-col">
                   
                   {/* Header */}
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-5 flex items-center gap-3 shadow-lg">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl backdrop-blur-sm border border-white/30">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 sm:p-4 flex items-center gap-2 sm:gap-3 shadow-lg flex-shrink-0">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center text-xl sm:text-2xl backdrop-blur-sm border border-white/30">
                       🤖
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-white font-bold text-lg">ErmiAI Assistant</h3>
-                      <p className="text-white/90 text-sm flex items-center gap-1">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-white font-bold text-base sm:text-lg truncate">ErmiAI Assistant</h3>
+                      <p className="text-white/90 text-xs sm:text-sm flex items-center gap-1">
                         <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                        Online • Ready to help
+                        <span className="truncate">Online</span>
                       </p>
                     </div>
                   </div>
 
                   {/* Messages Container */}
-                  <div className="flex-1 overflow-y-auto p-5 space-y-4 bg-gradient-to-b from-gray-900/50 to-gray-900/70">
+                  <div className="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-4 md:p-5 space-y-3 sm:space-y-4 bg-gradient-to-b from-gray-900/50 to-gray-900/70 overscroll-contain">
                     {messages.length === 0 && !isTyping && (
-                      <div className="text-center text-gray-300 mt-16">
+                      <div className="text-center text-gray-300 mt-8 sm:mt-12 md:mt-16 px-2">
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ delay: 0.2 }}
                         >
-                          <p className="text-6xl mb-4">👋</p>
-                          <p className="text-lg font-semibold mb-2">Welcome to ErmiAI!</p>
-                          <p className="text-sm text-gray-400">
-                            Your guide to Ermiyas's portfolio
+                          <p className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">👋</p>
+                          <p className="text-base sm:text-lg font-semibold mb-2">Welcome!</p>
+                          <p className="text-xs sm:text-sm text-gray-400">
+                            Ask about skills, projects, or experience
                           </p>
                         </motion.div>
                       </div>
@@ -169,14 +169,14 @@ const ChatBot = () => {
                         className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                       >
                         <div
-                          className={`max-w-[85%] p-4 rounded-2xl ${
+                          className={`max-w-[90%] sm:max-w-[85%] p-3 sm:p-4 rounded-2xl break-words ${
                             message.sender === 'user'
                               ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
                               : 'bg-white/10 backdrop-blur-sm text-white border border-white/20 shadow-md'
                           }`}
                         >
-                          <p className="text-sm whitespace-pre-line leading-relaxed">{message.text}</p>
-                          <p className={`text-xs mt-2 ${message.sender === 'user' ? 'text-white/70' : 'text-gray-400'}`}>
+                          <p className="text-xs sm:text-sm whitespace-pre-line leading-relaxed break-words">{message.text}</p>
+                          <p className={`text-[10px] sm:text-xs mt-1.5 sm:mt-2 ${message.sender === 'user' ? 'text-white/70' : 'text-gray-400'}`}>
                             {new Date(message.timestamp).toLocaleTimeString('en-US', {
                               hour: 'numeric',
                               minute: '2-digit',
@@ -213,14 +213,14 @@ const ChatBot = () => {
 
                   {/* Suggested Questions */}
                   {showSuggestions && messages.length <= 1 && (
-                    <div className="px-5 py-3 bg-gray-900/40 border-t border-white/10">
-                      <p className="text-xs text-gray-400 mb-3 font-semibold">💡 Try asking:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {suggestedQuestions.slice(0, 3).map((question, idx) => (
+                    <div className="px-3 sm:px-4 md:px-5 py-2 sm:py-3 bg-gray-900/40 border-t border-white/10 flex-shrink-0">
+                      <p className="text-[10px] sm:text-xs text-gray-400 mb-2 font-semibold">Quick questions:</p>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                        {suggestedQuestions.map((question, idx) => (
                           <motion.button
                             key={idx}
                             onClick={() => handleSuggestedQuestion(question)}
-                            className="text-xs px-3 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all"
+                            className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 bg-white/10 hover:bg-white/20 active:bg-white/30 border border-white/20 rounded-full text-white transition-all touch-manipulation"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                           >
@@ -232,28 +232,28 @@ const ChatBot = () => {
                   )}
 
                   {/* Input Area */}
-                  <div className="p-4 bg-gray-900/60 border-t border-white/10 backdrop-blur-sm">
-                    <div className="flex gap-2 items-center">
+                  <div className="p-2 sm:p-3 md:p-4 bg-gray-900/60 border-t border-white/10 backdrop-blur-sm flex-shrink-0">
+                    <div className="flex gap-1.5 sm:gap-2 items-center">
                       <input
                         type="text"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                        placeholder="Ask me anything..."
-                        className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Ask me..."
+                        className="flex-1 min-w-0 px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 touch-manipulation"
                       />
                       <motion.button
                         onClick={handleSendMessage}
                         disabled={!inputValue.trim()}
-                        className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white disabled:opacity-50"
+                        className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex-shrink-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white disabled:opacity-50 touch-manipulation"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <span className="text-lg">➤</span>
+                        <span className="text-base sm:text-lg">➤</span>
                       </motion.button>
                     </div>
-                    <p className="text-xs text-gray-500 mt-2 text-center">
-                      Press Enter • ESC to close • Alt+C to toggle
+                    <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center hidden sm:block">
+                      Press Enter • ESC to close
                     </p>
                   </div>
                 </div>
