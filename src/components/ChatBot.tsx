@@ -169,13 +169,13 @@ const ChatBot = () => {
                         className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                       >
                         <div
-                          className={`max-w-[90%] sm:max-w-[85%] p-3 sm:p-4 rounded-2xl break-words ${
+                          className={`max-w-[90%] sm:max-w-[85%] p-3 sm:p-4 rounded-2xl overflow-hidden ${
                             message.sender === 'user'
                               ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
                               : 'bg-white/10 backdrop-blur-sm text-white border border-white/20 shadow-md'
                           }`}
                         >
-                          <p className="text-xs sm:text-sm whitespace-pre-line leading-relaxed break-words">{message.text}</p>
+                          <p className="chatbot-message-text text-xs sm:text-sm whitespace-pre-wrap leading-relaxed">{message.text}</p>
                           <p className={`text-[10px] sm:text-xs mt-1.5 sm:mt-2 ${message.sender === 'user' ? 'text-white/70' : 'text-gray-400'}`}>
                             {new Date(message.timestamp).toLocaleTimeString('en-US', {
                               hour: 'numeric',

@@ -1406,3 +1406,14 @@ button,
     box-shadow: 0 0 0 6px rgba(14, 165, 233, 0.2);
   }
 }
+
+
+/* Chatbot text wrapping fix */
+.chatbot-message-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  display: block;
+}
