@@ -21,7 +21,7 @@ const Education = () => {
     {
       degree: 'Bachelor of Computer Science',
       level: 'Undergraduate Degree',
-      institution: 'University',
+      institution: 'Ambo University',
       program: 'Computer Science',
       period: '2020 - 2024',
       description: 'Comprehensive foundation in algorithms, data structures, software engineering, and computer systems.',

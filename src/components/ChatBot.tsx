@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { extractPortfolioKnowledge } from '../utils/portfolioExtractor';
 import { generateResponse } from '../utils/chatbotResponses';
+import { FormattedText } from '../utils/formatMarkdown';
 
 interface Message {
   id: string;
@@ -175,7 +176,7 @@ const ChatBot = () => {
                               : 'bg-white/10 backdrop-blur-sm text-white border border-white/20 shadow-md'
                           }`}
                         >
-                          <p className="chatbot-message-text text-xs sm:text-sm whitespace-pre-wrap leading-relaxed">{message.text}</p>
+                          <div className="chatbot-message-text text-xs sm:text-sm leading-relaxed"><FormattedText text={message.text} /></div>
                           <p className={`text-[10px] sm:text-xs mt-1.5 sm:mt-2 ${message.sender === 'user' ? 'text-white/70' : 'text-gray-400'}`}>
                             {new Date(message.timestamp).toLocaleTimeString('en-US', {
                               hour: 'numeric',
@@ -238,7 +239,7 @@ const ChatBot = () => {
                         type="text"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
-                        onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
                         placeholder="Ask me..."
                         className="flex-1 min-w-0 px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 touch-manipulation"
                       />

@@ -8,7 +8,6 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true });
 
   const projects = [
-    // Force rebuild - Sales Dashboard link updated
     {
       title: 'House Price Prediction',
       icon: <TrendingUp className="w-6 h-6" />,
@@ -45,7 +44,7 @@ const Projects = () => {
       problem: 'Educational institutions need to identify at-risk students early to provide targeted support.',
       solution: 'Built a predictive model to forecast student academic performance based on attendance, assignments, and demographic factors.',
       tech: ['Python', 'Regression', 'Feature Selection', 'Model Evaluation', 'Data Preprocessing'],
-      github: 'https://github.com/ERMIYASZEWDU/studestudent-performance-predictionnt-performance-prediction',
+      github: 'https://github.com/ERMIYASZEWDU/student-performance-prediction',
       demo: '#',
       color: 'from-orange-500 to-red-500',
     },
@@ -74,7 +73,6 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 relative overflow-hidden" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Force Vercel rebuild - timestamp: 2026-07-04 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -152,13 +150,17 @@ const Projects = () => {
                     <Github size={16} />
                     <span className="text-sm">Code</span>
                   </a>
-                  <a
-                    href={project.demo}
-                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-primary-600 to-primary-500 hover:shadow-lg hover:shadow-primary-500/50 rounded-lg transition-all"
-                  >
-                    <ExternalLink size={16} />
-                    <span className="text-sm">Demo</span>
-                  </a>
+                  {project.demo && project.demo !== '#' && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-primary-600 to-primary-500 hover:shadow-lg hover:shadow-primary-500/50 rounded-lg transition-all"
+                    >
+                      <ExternalLink size={16} />
+                      <span className="text-sm">Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -150,7 +150,7 @@ export function extractPortfolioKnowledge(): PortfolioKnowledge {
       {
         degree: "Bachelor of Computer Science",
         level: "Undergraduate Degree",
-        institution: "University",
+        institution: "Ambo University",
         program: "Computer Science",
         period: "2020 - 2024",
         description: "Comprehensive foundation in algorithms, data structures, software engineering, and computer systems.",
@@ -219,7 +219,7 @@ export function extractPortfolioKnowledge(): PortfolioKnowledge {
         problem: "Educational institutions need to identify at-risk students early to provide targeted support.",
         solution: "Built a predictive model to forecast student academic performance based on attendance, assignments, and demographic factors.",
         tech: ["Python", "Regression", "Feature Selection", "Model Evaluation", "Data Preprocessing"],
-        github: "https://github.com/ERMIYASZEWDU/studestudent-performance-predictionnt-performance-prediction",
+        github: "https://github.com/ERMIYASZEWDU/student-performance-prediction",
         demo: "#",
         category: "Machine Learning",
         description: "Early warning system for student academic performance"

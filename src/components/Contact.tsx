@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, CheckCircle } from 'lucide-react';
-import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
   const ref = useRef(null);
@@ -10,20 +10,24 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
 
     try {
-      // Replace with your EmailJS credentials
-      // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID');
+      // Build mailto URL with form data
+      const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      const mailtoUrl = `mailto:ermiyaszewdu266@gmail.com?subject=${subject}&body=${body}`;
       
-      // Simulated success for demo
-      setTimeout(() => {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setStatus('idle'), 5000);
-      }, 1500);
+      // Open email client
+      window.location.href = mailtoUrl;
+      
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);

@@ -12,7 +12,7 @@ const Certifications = () => {
       title: 'Web Development',
       issuer: 'Udacity',
       date: '2024',
-      badge: '�',
+      badge: '🌐',
     },
     {
       title: 'Artificial Intelligence',
@@ -30,7 +30,7 @@ const Certifications = () => {
       title: 'Android Development',
       issuer: 'Udacity',
       date: '2024',
-      badge: '�',
+      badge: '📱',
     },
     {
       title: 'Graphics Designer',

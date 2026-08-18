@@ -7,7 +7,6 @@ import {
   BarChart3,
   Globe,
   Settings,
-  BookOpen,
   Cloud,
   LineChart,
   PieChart,

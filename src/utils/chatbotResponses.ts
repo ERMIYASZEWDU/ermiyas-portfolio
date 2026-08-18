@@ -10,9 +10,9 @@ import type { PortfolioKnowledge } from './portfolioExtractor';
 export function generateResponse(userMessage: string, knowledge: PortfolioKnowledge): string {
   const msg = userMessage.toLowerCase();
 
-  // Greetings
-  if (msg.match(/\b(hi|hello|hey|greetings|good morning|good afternoon|sup)\b/)) {
-    return `Hello! 👋 I'm **ErmiAI**, ${knowledge.personal.name}'s Portfolio Assistant.\n\nI can help you learn about:\n• His background and ${knowledge.projects.length} ML/AI projects\n• Technical skills (${knowledge.skills.allSkills.length}+ technologies)\n• Education and ${knowledge.certifications.length} certifications\n• Professional experience\n• Contact information\n\nWhat would you like to know?`;
+  // Greetings & casual chat
+  if (msg.match(/\b(hi|hello|hey|greetings|good morning|good afternoon|good evening|sup|yo|howdy)\b/) || msg.match(/how are you|are you (?:fine|okay|good|doing)|what'?s up|what's good/)) {
+    return `Hey there! 👋 I'm doing great, thanks for asking! I'm **ErmiAI**, ${knowledge.personal.name}'s Portfolio Assistant.\n\nI can help you learn about:\n• His background and ${knowledge.projects.length} ML/AI projects\n• Technical skills (${knowledge.skills.allSkills.length}+ technologies)\n• Education and ${knowledge.certifications.length} certifications\n• Professional experience\n• Contact information\n\nWhat would you like to know?`;
   }
 
   // Thank you
@@ -26,7 +26,7 @@ export function generateResponse(userMessage: string, knowledge: PortfolioKnowle
   }
 
   // Skills
-  if (msg.match(/\b(skill|technology|tech|what (?:can|does) (?:he|you) (?:know|do))\b/) && !msg.match(/project/)) {
+  if (msg.match(/\b(skills?|technology|technologies|tech|what (?:can|does) (?:he|you) (?:know|do))\b/) && !msg.match(/projects?/)) {
     const categories = knowledge.skills.categories.slice(0, 4);
     return `💻 **Technical Skills** (${knowledge.skills.allSkills.length}+ technologies)\n\n${categories.map(cat => 
       `**${cat.category}:**\n${cat.skills.map(s => `  • ${s.name}`).join('\n')}`
@@ -34,7 +34,7 @@ export function generateResponse(userMessage: string, knowledge: PortfolioKnowle
   }
 
   // Projects
-  if (msg.match(/\b(project|work|portfolio|built|created|developed)\b/) && !msg.match(/\b(best|favorite)\b/)) {
+  if (msg.match(/\b(projects?|work|portfolio|built|created|developed|show\s*me)\b/) && !msg.match(/\b(best|favorite)\b/)) {
     const projects = knowledge.projects.slice(0, 6);
     return `🚀 **Featured Projects** (${knowledge.projects.length} total)\n\n${projects.map((p, i) => 
       `**${i + 1}. ${p.title}**\n${p.solution.substring(0, 80)}...\n💡 ${p.tech.slice(0, 3).join(', ')}\n🔗 ${p.github}`
@@ -61,7 +61,7 @@ export function generateResponse(userMessage: string, knowledge: PortfolioKnowle
   }
 
   // Experience
-  if (msg.match(/\b(experience|work|job|employment|career)\b/) && !msg.match(/project/)) {
+  if (msg.match(/\b(experience|work|job|employment|career)\b/) && !msg.match(/projects?/)) {
     const exp = knowledge.experience[0];
     return `💼 **${exp.role}** at **${exp.company}**\n${exp.period}\n\n${exp.description}\n\n**Responsibilities:**\n${exp.responsibilities.slice(0, 3).map(r => `• ${r}`).join('\n')}\n\n**Tech:** ${exp.technologies.join(', ')}`;
   }
@@ -94,7 +94,7 @@ export function generateResponse(userMessage: string, knowledge: PortfolioKnowle
   }
 
   // Python projects (cross-section example)
-  if (msg.match(/python.*project|project.*python/i)) {
+  if (msg.match(/python.*projects?|projects?.*python/i)) {
     const pythonProjects = knowledge.projects.filter(p => p.tech.some(t => t.toLowerCase().includes('python')));
     return `🐍 **Python Projects** (${pythonProjects.length} found)\n\n${pythonProjects.slice(0, 4).map(p => 
       `• **${p.title}**\n  ${p.tech.join(', ')}`
